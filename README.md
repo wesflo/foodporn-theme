@@ -1,2 +1,2 @@
 # foodporn-theme
-Starting with my Public theme for my Foodblog
+Starting with my public theme for my Foodblog
