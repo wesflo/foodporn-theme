@@ -1,0 +1,26 @@
+{
+  "name": "Foodporn",
+  "version": "0.0.1",
+  "description": "Food blog theme",
+  "homepage": "http://www.wesflo.de",
+  "author": {
+    "name": "Florian Wessner",
+    "email": "info@wesflo.de",
+    "url": "http://www.wesflo.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wesflo/foodporn-theme.git"
+  },
+  "dependencies": {
+    "bourbon-neat": "^1.8.0",
+    "bower": "^1.7.9",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.*",
+    "grunt-contrib-cssmin": "^1.*",
+    "grunt-contrib-uglify": "^1.*",
+    "grunt-contrib-watch": "^1.*",
+    "grunt-sass": "^1.1.0-beta",
+    "grunt-webfont": "^1.*"
+  }
+}
