@@ -6,6 +6,6 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "bourbon": "~4.2.3"
+    "bourbon": "^4.2.7"
   }
 }
