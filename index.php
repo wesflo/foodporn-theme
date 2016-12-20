@@ -14,6 +14,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'index'
 <?php
 include_once 'template/_partials/layout/header.phtml';
 include_once 'template/_partials/layout/footer.phtml';
+include_once 'template/_partials/layout/footerScripts.phtml';
 ?>
 </body>
 </html>
