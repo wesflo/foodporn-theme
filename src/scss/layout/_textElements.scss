@@ -4,9 +4,9 @@ body {
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    //color: $brandBlack;
-    //font-size: $defaultFontSize;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: $brandDefaultColor;
+    font-size: $defaultFontSize;
 }
 
 .ellipsis {
@@ -14,6 +14,12 @@ body {
     * {
         display: inline-block !important;
     }
+}
+
+h1 {
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 68px;
 }
 
 dl, ol, ul {

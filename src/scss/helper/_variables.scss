@@ -1,7 +1,17 @@
 //
 // Colors
 // --------------------------------------------------
+$cntBg: #fff;
 $bodyBackground: #eaeaea;
+$headerBackground: $cntBg;
+
+$brandDefaultColor: #444;
+$mainNavColor: #616161;
+$brandPrimary: #cc00ff;
+
+$mainNavHeight: 60px;
+$logoHeight: 120px;
+$headerHeight: $mainNavHeight + (($logoHeight - $mainNavHeight) / 2);
 
 //
 // Fonts
@@ -17,6 +27,7 @@ $h3FontSize: 16px;
 //
 // Global Spaces and Sizes
 // --------------------------------------------------
+$contentMaxWidth: 1400px;
 
 //
 // Sizes for media queries
