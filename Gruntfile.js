@@ -70,7 +70,11 @@ module.exports = function (grunt) {
                 files: {
                     '<%= buildPath %>/css/<%= pkg.name %>.min.css': [
                         '<%= tmpPath %>/css/reset.css',
-                        '<%= tmpPath %>/css/*.css'
+                        '<%= tmpPath %>/css/helper.css',
+                        '<%= tmpPath %>/css/layout.css',
+                        '<%= tmpPath %>/css/components.css',
+                        '<%= tmpPath %>/css/modules.css',
+                        '<%= tmpPath %>/css/pages.css'
                     ]
                 }
             }
