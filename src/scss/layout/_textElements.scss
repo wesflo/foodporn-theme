@@ -1,0 +1,70 @@
+html,
+body {
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    //color: $brandBlack;
+    //font-size: $defaultFontSize;
+}
+
+.ellipsis {
+    @include ellipsis();
+    * {
+        display: inline-block !important;
+    }
+}
+
+dl, ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    &.circle,
+    &.disc,
+    &.square,
+    &.lower-alpha,
+    &.decimal,
+    &.decimal-leading-zero {
+        margin-left: 20px;
+        li {
+            //margin-top: $panelSingleSpacing;
+        }
+    }
+
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+        //margin-top: 10px;
+    }
+
+    &.circle {
+        list-style: circle outside;
+    }
+    &.disc {
+        list-style: disc outside;
+    }
+    &.square {
+        list-style: square outside;
+    }
+    &.lower-alpha {
+        list-style: lower-alpha outside;
+    }
+    &.decimal {
+        list-style: decimal outside;
+    }
+    &.decimal-leading-zero {
+        list-style: decimal-leading-zero outside;
+    }
+    &.lower-roman {
+        list-style: lower-roman;
+    }
+    &.upper-roman {
+        list-style: upper-roman;
+    }
+}
