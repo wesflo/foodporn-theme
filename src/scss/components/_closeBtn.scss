@@ -1,0 +1,19 @@
+.closeBtn {
+    float: right;
+    font-size: 40px;
+    line-height: 1;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+button.closeBtn {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}

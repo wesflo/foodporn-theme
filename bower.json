@@ -1,0 +1,11 @@
+{
+  "name": "foodporn",
+  "version": "0.0.1",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  }
+}
