@@ -1,5 +1,5 @@
 var domReady = function () {
-  var helper = new Helper;
+    var helper = new Helper;
 };
 
 document.addEventListener("DOMContentLoaded", domReady);

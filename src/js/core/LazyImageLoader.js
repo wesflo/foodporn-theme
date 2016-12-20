@@ -36,7 +36,7 @@ var LazyImageLoader = function () {
         var i = 0;
         for (; i < placeholdersLength; i++) {
             var placeholder = placeholders[i];
-            if (!placeholder.loaded && isInLoadableArea(placeholder)){
+            if (!placeholder.loaded && isInLoadableArea(placeholder)) {
                 loadImage(placeholder, i);
             }
         }

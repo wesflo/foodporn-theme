@@ -63,7 +63,7 @@ var Helper = function () {
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
         var expires = (lifetime === false) ? 'Session' : d.toUTCString(),
             cookie = cName + '=' + cVal + '; expires=' + expires + '; path=/;';
-        if(domain) {
+        if (domain) {
             cookie += ' domain=' + domain + ''
         }
         document.cookie = cookie;
@@ -72,7 +72,7 @@ var Helper = function () {
     wf.getHashParams = function () {
         var hash = location.hash;
         hash = hash.replace('#', '');
-        if(hash.length > 0) {
+        if (hash.length > 0) {
             var hashes = hash.split('&'),
                 i = 0,
                 l = hashes.length;
@@ -93,7 +93,7 @@ var Helper = function () {
 
     wf.getHashParam = function (key) {
         var params = wf.getHashParams();
-        if(typeof params === 'object'){
+        if (typeof params === 'object') {
             return params[key] || false;
         } else {
             return params;

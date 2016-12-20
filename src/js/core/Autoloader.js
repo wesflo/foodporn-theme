@@ -89,7 +89,8 @@ var Autoloader = function () {
         initConstructor(constructor);
     };
     that.loadScript = function (src, fu) {
-        fu = fu || function () {};
+        fu = fu || function () {
+            };
         loadScriptFile(src, fu);
     };
     that.initConstructorOnElement = function (constructor, el) {
