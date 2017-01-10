@@ -1,3 +1,19 @@
+<?php
+$nav = array(
+    array(
+        'label' => 'Tags',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Kontakt',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Impressum',
+        'href'  => '#'
+    ),
+);
+?>
 <footer class="pageFooter clearfix">
     <div>
         <div class="copy">
@@ -5,12 +21,13 @@
         </div>
         <nav>
             <ul>
-                <li>
-                    <a href="#">Kontakt</a>
-                </li>
-                <li>
-                    <a href="#">Impressum</a>
-                </li>
+                <?php foreach ($nav as $item) { ?>
+                    <li>
+                        <a href="<?= $item['href']; ?>">
+                            <?= $item['label']; ?>
+                        </a>
+                    </li>
+                <?php } ?>
             </ul>
         </nav>
     </div>
