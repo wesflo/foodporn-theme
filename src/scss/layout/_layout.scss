@@ -5,12 +5,18 @@ html {
 body {
     background: $bodyBackground;
     overflow-y: scroll;
+    padding-top: $headerHeight;
 }
 
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
+* {
+    position: relative;
+    z-index: 5;
+
+    &,
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
 }
 
 img {

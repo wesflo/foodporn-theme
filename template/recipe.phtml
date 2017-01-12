@@ -1,0 +1,93 @@
+<header class="recipeHeader container">
+    <h1>Lorem ipsum dolor</h1>
+</header>
+<div class="recipePage parallaxOverlay">
+    <div class="container">
+        <article class="mainCol">
+            <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+            <div class="gallery">
+                <a href="javascript:">
+                    <img src="<?= $_conf['baseURL'] ?>img/_dummy/recipe_1.png" alt="1">
+                    <span class="title">Lorem ipsum dolor sit amet</span>
+                </a>
+                <a href="javascript:">
+                    <img src="<?= $_conf['baseURL'] ?>img/_dummy/recipe_2.png" alt="2">
+                    <span class="title">Lorem ipsum dolor sit amet</span>
+                </a>
+            </div>
+            <h2>Zubereitung</h2>
+            <ol class="preparations">
+                <li>
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                </li>
+                <li>
+                    At vero eos et accusam et justo duo dolores et ea rebum.
+                </li>
+                <li>
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </li>
+                <li>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </li>
+            </ol>
+        </article>
+        <aside>
+            <dl>
+                <dt>Zubereitungszeit</dt>
+                <dd>120 Minutes</dd>
+                <dt>Schwierigkeit</dt>
+                <dd>
+                    mittel
+                    <i class="icon_head selected"></i>
+                    <i class="icon_head selected"></i>
+                    <i class="icon_head selected"></i>
+                    <i class="icon_head"></i>
+                    <i class="icon_head"></i>
+                </dd>
+            </dl>
+            <h3 class="h2">Zutaten</h3>
+            <dl class="ingredients">
+                <dt>Lachssteak</dt>
+                <dd>300g</dd>
+                <dt>Grüner Spargel</dt>
+                <dd>1 Bund</dd>
+                <dt>Kartoffeln</dt>
+                <dd>250g</dd>
+                <dt>Cocktailtomaten</dt>
+                <dd>200g</dd>
+                <dt>Thymian</dt>
+                <dd>3 Stengel</dd>
+                <dt class="hide">Gewürze</dt>
+                <dd>Salz & Pfeffer</dd>
+            </dl>
+            <h3 class="h2">Kategoreien</h3>
+            <ul class="linkList">
+                <?php for ($i = 0; $i < 4; $i++) { ?>
+                    <li>
+                        <a href="#">
+                            Category <?= $i; ?>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+            <h3 class="h2">Tag</h3>
+            <ul class="linkList">
+                <?php for ($i = 0; $i < 10; $i++) { ?>
+                    <li>
+                        <a href="#">
+                            Tag <?= $i; ?>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </aside>
+    </div>
+</div>
+<div class="parallaxImageContainer">
+    <img src="<?= $_conf['baseURL'] ?>img/_dummy/banner.png" alt="1">
+    <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2">
+</div>

@@ -1,0 +1,13 @@
+.parallaxImageContainer {
+    @include position(fixed, 0 0 0 0);
+    z-index: 1;
+
+    img {
+        width: 100%;
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
+}

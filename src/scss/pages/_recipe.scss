@@ -1,0 +1,44 @@
+.recipeHeader {
+    padding: 180px 23% 260px 0;
+    h1 {
+        color: $invertedColor;
+        @include textShadow(rgba(0,0,0, .2) );
+    }
+}
+
+.recipePage {
+    $colSpace: 80px;
+    background-color: $bodyBackground;
+
+    .desc {
+        $lineH: 26px;
+        $h: 100px;
+        $p: 20px;
+        margin: (-$h) (-$contentBottomSpace) 40px (-$p);
+        padding: $p;
+        min-height: $h;
+        display: block;
+        background-color: $bodyBackground;
+        font-family: $thinFontFamily;
+        font-weight: 300;
+        line-height: $lineH;
+        font-size: 16px;
+
+        &:first-letter {
+            font-size: ($lineH * 3) + 10;
+            line-height: ($lineH * 3);
+            margin-right: 8px;
+            color: $brandPrimary;
+            float: left;
+        }
+    }
+
+    .mainCol {
+        @include span-columns(7);
+        margin-right: 0;
+        padding-right: $colSpace;
+    }
+    aside {
+        @include span-columns(5);
+    }
+}

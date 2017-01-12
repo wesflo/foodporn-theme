@@ -4,7 +4,7 @@ body {
 }
 
 body {
-    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: $defaultFontFamily;
     color: $brandDefaultColor;
     font-size: $defaultFontSize;
 }
@@ -16,10 +16,16 @@ body {
     }
 }
 
-h1 {
-    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+h1, .h1 {
+    font-family: $thinFontFamily;
     font-weight: 300;
     font-size: 68px;
+}
+
+h2, .h2 {
+    font-family: $thinFontFamily;
+    font-weight: 300;
+    font-size: 32px;
 }
 
 dl, ol, ul {

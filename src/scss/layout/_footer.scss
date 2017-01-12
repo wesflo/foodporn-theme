@@ -1,5 +1,7 @@
 .pageFooter {
     $footerColor: #f1f1f1;
+    position: relative;
+    z-index: 20;
     height: $footerHeight;
     background-color: #1d1d1d;
     font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;

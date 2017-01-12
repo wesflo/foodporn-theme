@@ -1,0 +1,23 @@
+.preparations {
+    counter-reset: steps-counter;
+
+    li {
+        $leftSpace: 40px;
+        margin-top: 20px;
+        padding-left: $leftSpace;
+        @include clearfix;
+
+        &:before {
+            $h: 40px;
+            content: counter(steps-counter) '.';
+            counter-increment: steps-counter;
+            float: left;
+            margin-left: -$leftSpace;
+            font-size: $h;
+            line-height: $h;
+            font-family: $thinFontFamily;
+            font-weight: 300;
+            color: $brandPrimary;
+        }
+    }
+}

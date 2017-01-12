@@ -1,3 +1,4 @@
 .pageHeader {
     @include position(fixed, 0 0 null 0);
+    z-index: 30;
 }
