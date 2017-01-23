@@ -4,8 +4,10 @@
 <div class="recipePage parallaxOverlay">
     <div class="container">
         <article class="mainCol">
-            <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+            <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                et
                 justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
             <div class="gallery">
                 <a href="javascript:">
@@ -36,35 +38,51 @@
             </ol>
         </article>
         <aside>
-            <dl>
-                <dt>Zubereitungszeit</dt>
-                <dd>120 Minutes</dd>
-                <dt>Schwierigkeit</dt>
-                <dd>
-                    mittel
-                    <i class="icon_head selected"></i>
-                    <i class="icon_head selected"></i>
-                    <i class="icon_head selected"></i>
-                    <i class="icon_head"></i>
-                    <i class="icon_head"></i>
-                </dd>
-            </dl>
-            <h3 class="h2">Zutaten</h3>
-            <dl class="ingredients">
-                <dt>Lachssteak</dt>
-                <dd>300g</dd>
-                <dt>Grüner Spargel</dt>
-                <dd>1 Bund</dd>
-                <dt>Kartoffeln</dt>
-                <dd>250g</dd>
-                <dt>Cocktailtomaten</dt>
-                <dd>200g</dd>
-                <dt>Thymian</dt>
-                <dd>3 Stengel</dd>
-                <dt class="hide">Gewürze</dt>
-                <dd>Salz & Pfeffer</dd>
-            </dl>
-            <h3 class="h2">Kategoreien</h3>
+            <ul class="labeled">
+                <li>
+                    <span>Zubereitungszeit</span>
+                    <span>120 Minutes</span>
+                </li>
+                <li>
+                    <span>Schwierigkeit</span>
+                    <span>
+                        mittel
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head"></i>
+                        <i class="icon_head"></i>
+                    </span>
+                </li>
+            </ul>
+            <h3>Zutaten</h3>
+            <ul class="labeled ingredients">
+                <li>
+                    <span>300g</span>
+                    <span>Lachssteak</span>
+                </li>
+                <li>
+                    <span>1 Bund</span>
+                    <span>Grüner Spargel</span>
+                </li>
+                <li>
+                    <span>250g</span>
+                    <span>Kartoffeln</span>
+                </li>
+                <li>
+                    <span>200g</span>
+                    <span>Cocktail Tomaten</span>
+                </li>
+                <li>
+                    <span>3 Stengel</span>
+                    <span>Thymian</span>
+                </li>
+                <li>
+                    <span>Gewürze</span>
+                    <span>Salz & Pfeffer</span>
+                </li>
+            </ul>
+            <h3>Kategoreien</h3>
             <ul class="linkList">
                 <?php for ($i = 0; $i < 4; $i++) { ?>
                     <li>
@@ -74,7 +92,7 @@
                     </li>
                 <?php } ?>
             </ul>
-            <h3 class="h2">Tag</h3>
+            <h3>Tag</h3>
             <ul class="linkList">
                 <?php for ($i = 0; $i < 10; $i++) { ?>
                     <li>

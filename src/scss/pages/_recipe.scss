@@ -12,7 +12,7 @@
 
     .desc {
         $lineH: 26px;
-        $h: 100px;
+        $h: 50px;
         $p: 20px;
         margin: (-$h) (-$contentBottomSpace) 40px (-$p);
         padding: $p;
@@ -40,5 +40,21 @@
     }
     aside {
         @include span-columns(5);
+        padding-top: $contentBottomSpace;
+
+        ul {
+            margin-bottom: $contentBottomSpace;
+        }
+    }
+
+    .ingredients {
+        li {
+            > * {
+                &:first-child {
+                    font-weight: bold;
+                    color: $brandLightColor;
+                }
+            }
+        }
     }
 }

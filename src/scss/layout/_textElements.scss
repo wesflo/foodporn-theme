@@ -28,6 +28,13 @@ h2, .h2 {
     font-size: 32px;
 }
 
+h3, .h3 {
+    font-family: $thinFontFamily;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
 dl, ol, ul {
     list-style: none;
     margin: 0;
@@ -79,4 +86,86 @@ ul, ol {
     &.upper-roman {
         list-style: upper-roman;
     }
+
+    &.labeled{
+        display: table;
+
+        li {
+            display: table-row;
+
+            > * {
+                display: table-cell;
+                padding: 4px 10px;
+
+                &:first-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    &.linkList {
+        @include clearfix;
+
+        li {
+            $h: 28px;
+            $angle: 8px;
+
+            float: left;
+            padding: 1px 0;
+            margin-right: -($angle - 2);
+
+            a {
+                position: relative;
+                display: inline-block;
+                padding: 0 8px;
+                height: $h;
+                line-height: $h +2;
+                color: $invertedColor;
+                background-color: $brandPrimary;
+                text-decoration: none;
+                font-size: $smallFontSize;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin: 0 $angle;
+
+                &:before,
+                &:after {
+                    content: '';
+                    border: 0 solid;
+                    @include square(0);
+                    display: block;
+                    @include position(absolute, 0 null 0 null);
+                }
+
+                &:before {
+                    border-width: $h $angle 0 0;
+                    border-color: transparent $brandPrimary transparent transparent;
+                    left: -$angle;
+                }
+
+                &:after {
+                    border-width: 0 0 $h $angle;
+                    border-color: transparent transparent transparent $brandPrimary;
+                    right: -$angle;
+                }
+
+                &:hover,
+                &:focus {
+                    background-color: $brandDarkenPrimary;
+
+                    &:before {
+                        border-color: transparent $brandDarkenPrimary transparent transparent;
+                    }
+
+                    &:after {
+                        border-color: transparent transparent transparent $brandDarkenPrimary;
+                    }
+                }
+            }
+        }
+    }
 }
+
+

@@ -2,12 +2,14 @@
 // Colors
 // --------------------------------------------------
 $cntBg: #fff;
-$bodyBackground: #eaeaea;
+$bodyBackground: #f0f0f0;
 $headerBackground: $cntBg;
 
-$brandDefaultColor: #444;
+$brandDefaultColor: #333;
+$brandLightColor: #666;
 $mainNavColor: #616161;
 $brandPrimary: #cc00ff;
+$brandDarkenPrimary: darken($brandPrimary, 10%);
 $invertedColor: #fff;
 
 $mainNavHeight: 60px;
