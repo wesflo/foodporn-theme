@@ -4,10 +4,15 @@
 
     img {
         width: 100%;
-        display: none;
+        min-width: 1200px;
+        //display: none;
 
         &:first-child {
             display: block;
         }
     }
+}
+
+.parallaxOverlay {
+    background-color: $bodyBackground;
 }

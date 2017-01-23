@@ -16,6 +16,7 @@
         position: relative;
         width: 100%;
         border: $singleSpace solid $bodyBackground;
+        padding: 0;
 
         &.half {
             width: 50%;

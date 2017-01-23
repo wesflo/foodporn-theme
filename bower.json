@@ -7,6 +7,6 @@
   ],
   "dependencies": {
     "bourbon": "^4.2.7",
-    "neat": "^1.8.0"
+    "bootstrap-sass": "^3.3.7"
   }
 }

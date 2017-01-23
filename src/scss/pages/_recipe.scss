@@ -8,13 +8,13 @@
 
 .recipePage {
     $colSpace: 80px;
-    background-color: $bodyBackground;
+    margin-bottom: 400px;
 
     .desc {
         $lineH: 26px;
         $h: 50px;
         $p: 20px;
-        margin: (-$h) (-$contentBottomSpace) 40px (-$p);
+        margin: (-$h) (-$p) 40px (-$p);
         padding: $p;
         min-height: $h;
         display: block;
@@ -34,12 +34,10 @@
     }
 
     .mainCol {
-        @include span-columns(7);
         margin-right: 0;
         padding-right: $colSpace;
     }
     aside {
-        @include span-columns(5);
         padding-top: $contentBottomSpace;
 
         ul {
@@ -57,4 +55,8 @@
             }
         }
     }
+}
+
+.related {
+    padding: $contentBottomSpace 0;
 }

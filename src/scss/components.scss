@@ -1,5 +1,4 @@
 @import "../../vendor/bourbon/app/assets/stylesheets/_bourbon.scss";
-@import "../../vendor/neat/app/assets/stylesheets/_neat.scss";
 @import "helper/variables";
 @import "helper/mixins";
 //A
@@ -15,6 +14,7 @@
 //J
 //K
 //L
+@import "components/linkList";
 //M
 //N
 //O
