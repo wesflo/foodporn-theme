@@ -1,29 +1,26 @@
-.linkList {
+.fancyList {
     $h: 28px;
-    $angle: 8px;
+    $angle: 10px;
     @include clearfix;
 
     li {
         float: left;
-        padding: 1px 0;
-        margin-right: -($angle - 2);
+        padding: 1px;
     }
-
+/*
     span,
     a {
         position: relative;
         display: inline-block;
         padding: 0 8px;
+        margin: 0 $angle;
         height: $h;
         line-height: $h +2;
-        color: $invertedColor;
-        background-color: $brandPrimary;
         text-decoration: none;
         font-size: $smallFontSize;
         font-weight: 300;
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin: 0 $angle;
 
         &:before,
         &:after {
@@ -36,27 +33,30 @@
 
         &:before {
             border-width: $h $angle 0 0;
-            border-color: transparent $brandPrimary transparent transparent;
             left: -$angle;
         }
 
         &:after {
             border-width: 0 0 $h $angle;
-            border-color: transparent transparent transparent $brandPrimary;
             right: -$angle;
         }
-
-        &:hover,
-        &:focus {
-            background-color: $brandDarkenPrimary;
-
-            &:before {
-                border-color: transparent $brandDarkenPrimary transparent transparent;
-            }
-
-            &:after {
-                border-color: transparent transparent transparent $brandDarkenPrimary;
-            }
-        }
     }
+*/
+    span,
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 0 8px;
+        height: $h;
+        line-height: $h +2;
+        text-decoration: none;
+        font-size: $smallFontSize;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: ($h/2);
+    }
+
+    @include fancyListColors(a, $invertedColor, $brandPrimary, $brandDarkenPrimary);
+    @include fancyListColors(span);
 }
