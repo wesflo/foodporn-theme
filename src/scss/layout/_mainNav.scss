@@ -24,14 +24,15 @@
                 text-transform: uppercase;
                 letter-spacing: 1px;
             }
-
+/*
             .logo {
-                $borderWidth: 40px;
+                $borderWidth: 20px;
                 $innerSpace: 10px;
-                padding: $innerSpace 0;
-                margin: 0 30px 0 20px;
+                position: relative;
+                padding: $innerSpace 10px;
+                margin: 0 30px 0 0;
                 height: $logoHeight;
-                width: 80px;
+                width: 100px;
                 background-color: $headerBackground;
                 text-align: center;
 
@@ -43,8 +44,8 @@
 
                 &:before,
                 &:after {
+                    @include position(absolute, 0 null 0 null);
                     content: '';
-                    margin: -$innerSpace 0;
                     border: solid $headerBackground;
                     border-width: ($logoHeight / 2) $borderWidth;
                     border-top-color: transparent;
@@ -53,17 +54,33 @@
 
                 &:before {
                     border-left: 0;
-                    margin-left: -$borderWidth;
+                    left: -$borderWidth;
                 }
 
                 &:after {
                     border-right: 0;
-                    margin-right: -$borderWidth;
+                    right: -$borderWidth;
                 }
 
                 img {
                     display: inline-block;
                     height: 100%;
+                }
+            }
+            */
+
+            .logo {
+                @include square(120px);
+                padding: 10px;
+                position: relative;
+                background-color: $headerBackground;
+                text-align: center;
+                border-radius: 50%;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    margin: 0 auto;
                 }
             }
         }
