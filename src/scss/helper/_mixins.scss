@@ -61,3 +61,34 @@
     -webkit-transform: translateX($t);
     transform: translateX($t);
 }
+
+@mixin fancyListColors($el, $text: $brandPrimary, $bg: $bodyBackground, $bgHover: 0) {
+    #{$el} {
+        color: $text;
+        background-color: $bg;
+        &:before {
+            border-color: transparent $bg transparent transparent;
+        }
+
+        &:after {
+            border-color: transparent transparent transparent $bg;
+        }
+    }
+    @if ($bgHover != 0) {
+        #{$el} {
+
+            &:hover,
+            &:focus {
+                background-color: $bgHover;
+
+                &:before {
+                    border-color: transparent $bgHover transparent transparent;
+                }
+
+                &:after {
+                    border-color: transparent transparent transparent $bgHover;
+                }
+            }
+        }
+    }
+}
