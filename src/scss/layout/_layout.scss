@@ -5,13 +5,10 @@ html {
 body {
     background: $bodyBackground;
     overflow-y: scroll;
-    padding-top: $headerHeight;
+    padding-top: $mainNavHeight;
 }
 
 * {
-    position: relative;
-    z-index: 5;
-
     &,
     &:after,
     &:before {

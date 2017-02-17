@@ -1,18 +1,26 @@
-.parallaxImageContainer {
-    @include position(fixed, 0 0 0 0);
-    z-index: 1;
+.parallax {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
-    img {
-        width: 100%;
-        min-width: 1200px;
-        //display: none;
-
-        &:first-child {
-            display: block;
+    &.fixed,
+    &.scroll {
+        > img {
+            @include position(absolute, 0 0 null 0);
+            z-index: 1;
         }
     }
-}
 
-.parallaxOverlay {
-    background-color: $bodyBackground;
+    &.scroll {
+        height: 500px;
+        position: relative;
+
+        > img {
+
+        }
+    }
+
+    &.fixed {
+        height: 360px;
+    }
 }

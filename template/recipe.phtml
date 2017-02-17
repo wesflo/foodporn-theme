@@ -1,10 +1,40 @@
-<header class="recipeHeader container">
-    <h1>Lorem ipsum dolor</h1>
-</header>
-<div class="recipePage parallaxOverlay">
+<div class="recipePage">
+    <header class="recipeHeader parallax scroll">
+        <div class="container">
+            <h1>
+                Lorem ipsum dolor
+                <span>
+                    Lorem ipsum dolor orem ipsum dolor
+                </span>
+            </h1>
+        </div>
+        <div class="shortFacts">
+            <div class="container">
+                <ul class="fancyList">
+                    <li>
+                        <a href="javascript:">Rezept</a>
+                    </li>
+                    <li>
+                        <span>120 Minutes</span>
+                    </li>
+                    <li>
+                        <span>
+                        mittel
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head"></i>
+                        <i class="icon_head"></i>
+                    </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img src="<?= $_conf['baseURL'] ?>img/_dummy/banner.png" alt="1">
+    </header>
     <div class="container">
-        <div class="row">
-            <article class="mainCol col-xl-18">
+        <div class="row largeSpace">
+            <article class="mainCol col-xl-16">
                 <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                     accusam et
                     justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
@@ -38,24 +68,7 @@
                     </li>
                 </ol>
             </article>
-            <aside class="col-xl-6">
-                <ul class="labeled">
-                    <li>
-                        <span>Zubereitungszeit</span>
-                        <span>120 Minutes</span>
-                    </li>
-                    <li>
-                        <span>Schwierigkeit</span>
-                        <span>
-                        mittel
-                        <i class="icon_head selected"></i>
-                        <i class="icon_head selected"></i>
-                        <i class="icon_head selected"></i>
-                        <i class="icon_head"></i>
-                        <i class="icon_head"></i>
-                    </span>
-                    </li>
-                </ul>
+            <aside class="col-xl-8">
                 <h3>Zutaten</h3>
                 <ul class="labeled ingredients">
                     <li>
@@ -84,7 +97,7 @@
                     </li>
                 </ul>
                 <h3>Kategoreien</h3>
-                <ul class="linkList">
+                <ul class="fancyList">
                     <?php for ($i = 0; $i < 4; $i++) { ?>
                         <li>
                             <a href="#">
@@ -94,7 +107,7 @@
                     <?php } ?>
                 </ul>
                 <h3>Tag</h3>
-                <ul class="linkList">
+                <ul class="fancyList">
                     <?php for ($i = 0; $i < 10; $i++) { ?>
                         <li>
                             <a href="#">
@@ -107,8 +120,11 @@
         </div>
     </div>
 </div>
-<div class="related parallaxOverlay">
-    <div class="container">
+<div class="parallax fixed">
+    <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2" class="parallaxFixed">
+</div>
+<div class="container">
+    <div class="related recipes">
         <h3 class="h2">Neueste Rezepte</h3>
         <ul class="teaserList row smallSpace rowSpace">
             <?php for ($i = 0; $i < 8; $i++) { ?>
@@ -124,8 +140,4 @@
             <?php } ?>
         </ul>
     </div>
-</div>
-<div class="parallaxImageContainer">
-    <img src="<?= $_conf['baseURL'] ?>img/_dummy/banner.png" alt="1">
-    <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2">
 </div>

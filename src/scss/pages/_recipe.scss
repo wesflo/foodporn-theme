@@ -1,23 +1,25 @@
-.recipeHeader {
-    padding: 180px 23% 260px 0;
-    h1 {
-        color: $invertedColor;
-        @include textShadow(rgba(0,0,0, .2) );
-    }
-}
-
 .recipePage {
     $colSpace: 80px;
-    margin-bottom: 400px;
+
+    header {
+        h1 {
+            @include position(absolute, 40% null null null);
+            z-index: 5;
+            height: 50%;
+            color: $invertedColor;
+            @include textShadow(rgba(0,0,0, .2) );
+        }
+    }
+
+    .shortFacts {
+        @include position(absolute, null 0 2px 0);
+        z-index: 5;
+    }
 
     .desc {
         $lineH: 26px;
-        $h: 50px;
-        $p: 20px;
-        margin: (-$h) (-$p) 40px (-$p);
-        padding: $p;
-        min-height: $h;
         display: block;
+        padding: $contentBottomSpace 0 $contentBottomSpace;
         background-color: $bodyBackground;
         font-family: $thinFontFamily;
         font-weight: 300;
@@ -33,10 +35,6 @@
         }
     }
 
-    .mainCol {
-        margin-right: 0;
-        padding-right: $colSpace;
-    }
     aside {
         padding-top: $contentBottomSpace;
 

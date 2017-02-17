@@ -20,6 +20,15 @@ h1, .h1 {
     font-family: $thinFontFamily;
     font-weight: 300;
     font-size: 68px;
+    line-height: 68px;
+    text-transform: uppercase;
+
+    span {
+        text-transform: none;
+        display: block;
+        font-size: 28px;
+        line-height: 32px;
+    }
 }
 
 h2, .h2 {
@@ -29,7 +38,8 @@ h2, .h2 {
     margin-bottom: 20px;
 }
 
-h3, .h3 {
+h3, .h3,
+h4, .h4 {
     font-family: $thinFontFamily;
     font-weight: 300;
     font-size: 20px;
