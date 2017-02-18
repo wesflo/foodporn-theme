@@ -1,62 +1,9 @@
 .recipePage {
-    $colSpace: 80px;
-
-    header {
-        background-color: #000;
+    .detailHeader {
+        height: 500px;
 
         h1 {
-            @include position(absolute, 40% null null null);
-            z-index: 5;
-            height: 50%;
-            color: $invertedColor;
-            @include textShadow(rgba(0,0,0, .2) );
-        }
-
-        .overlay {
-            @include position(absolute, 0 0 0 0);
-            z-index: 3;
-            background-color: #000;
-            opacity: .16;
-            @include transition(opacity 600ms ease-in-out);
-        }
-
-        &:hover {
-            .overlay {
-                opacity: 0;
-            }
-        }
-    }
-
-    .shortFacts {
-        @include position(absolute, null 0 2px 0);
-        z-index: 5;
-    }
-
-    .desc {
-        $lineH: 26px;
-        display: block;
-        padding: $contentBottomSpace 0 $contentBottomSpace;
-        background-color: $bodyBackground;
-        font-family: $thinFontFamily;
-        font-weight: 300;
-        line-height: $lineH;
-        font-size: 16px;
-
-        &:first-letter {
-            font-size: ($lineH * 3) + 10;
-            line-height: ($lineH * 3);
-            margin-right: 8px;
-            color: $brandPrimary;
-            float: left;
-        }
-    }
-
-    aside {
-        padding-top: $contentBottomSpace;
-
-        dl,
-        ul {
-            margin-bottom: $contentBottomSpace;
+            padding-top: 300px;
         }
     }
 
@@ -69,6 +16,11 @@
                 }
             }
         }
+    }
+
+
+    .spacer {
+        height: 360px;
     }
 }
 

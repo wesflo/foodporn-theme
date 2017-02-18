@@ -1,0 +1,15 @@
+.winePage {
+    .detailHeader {
+        height: 400px;
+        background-color: #3c3c3c;
+
+        h1 {
+            padding-top: 120px;
+        }
+
+        img {
+            @include position(absolute, auto auto 0 50%);
+            @include transform(translateX(-50%));
+        }
+    }
+}

@@ -1,5 +1,5 @@
-<div class="recipePage">
-    <header class="recipeHeader parallax scroll">
+<section class="recipePage">
+    <header class="detailHeader parallax scroll" id="recipeHeader">
         <div class="container">
             <h1>
                 Lorem ipsum dolor
@@ -89,36 +89,6 @@
                         <span>Zucker</span>
                     </dd>
                 </dl>
-                <?php
-                  /*
-                   <ul class="labeled ingredients">
-                    <li>
-                        <span>300g</span>
-                        <span>Lachssteak</span>
-                    </li>
-                    <li>
-                        <span>1 Bund</span>
-                        <span>Grüner Spargel</span>
-                    </li>
-                    <li>
-                        <span>250g</span>
-                        <span>Kartoffeln</span>
-                    </li>
-                    <li>
-                        <span>200g</span>
-                        <span>Cocktail Tomaten</span>
-                    </li>
-                    <li>
-                        <span>3 Stengel</span>
-                        <span>Thymian</span>
-                    </li>
-                    <li>
-                        <span>Gewürze</span>
-                        <span>Salz & Pfeffer</span>
-                    </li>
-                </ul>
-                   */
-                ?>
                 <h3>Kategoreien</h3>
                 <ul class="fancyList">
                     <?php for ($i = 0; $i < 4; $i++) { ?>
@@ -142,7 +112,7 @@
             </aside>
         </div>
     </div>
-</div>
+</section>
 <div class="parallax fixed">
     <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2" class="parallaxFixed">
 </div>

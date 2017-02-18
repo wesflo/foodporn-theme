@@ -12,15 +12,10 @@
     }
 
     &.scroll {
-        height: 500px;
         position: relative;
 
         > img {
 
         }
-    }
-
-    &.fixed {
-        height: 360px;
     }
 }

@@ -29,6 +29,7 @@
     }
 
     $lineSpace: 5px;
+    $ddWidth: 70px;
     dt,
     dd {
         display: block;
@@ -37,7 +38,7 @@
 
     dt {
         padding-top: 8px;
-        width: 70%;
+        width: calc(100% - #{$ddWidth});
         float: right;
         clear: both;
         padding-left: $lineSpace;
@@ -45,7 +46,7 @@
 
     dd {
         float: left;
-        width: 30%;
+        width: $ddWidth;
         padding-top: 6px;
         padding-right: $lineSpace;
         border-right: 1px solid $brandLightBorder;

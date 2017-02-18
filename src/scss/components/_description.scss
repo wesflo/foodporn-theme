@@ -1,0 +1,18 @@
+.desc {
+    $lineH: 26px;
+    display: block;
+    padding: $contentBottomSpace 0 0;
+    background-color: $bodyBackground;
+    font-family: $thinFontFamily;
+    font-weight: 300;
+    line-height: $lineH;
+    font-size: 16px;
+
+    &:first-letter {
+        font-size: ($lineH * 3) + 10;
+        line-height: ($lineH * 3);
+        margin-right: 8px;
+        color: $brandPrimary;
+        float: left;
+    }
+}
