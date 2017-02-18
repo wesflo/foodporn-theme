@@ -1,0 +1,29 @@
+.detailHeader {
+    background-color: #3c3c3c;
+
+    h1 {
+        position: absolute;
+        z-index: 5;
+        color: $invertedColor;
+        @include textShadow(rgba(0,0,0, .3) );
+    }
+
+    .overlay {
+        @include position(absolute, 0 0 0 0);
+        z-index: 3;
+        background-color: #000;
+        opacity: .16;
+        @include transition(opacity 600ms ease-in-out);
+    }
+
+    &:hover {
+        .overlay {
+            opacity: 0;
+        }
+    }
+}
+
+.shortFacts {
+    @include position(absolute, null 0 2px 0);
+    z-index: 5;
+}

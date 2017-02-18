@@ -2,13 +2,23 @@
     @include clearfix;
 }
 
+.pushRight {
+    float: right;
+}
+
+.pushLeft {
+  float: left;
+}
+
+.contentBottomSpace {
+    margin-bottom: $contentBottomSpace;
+}
+
 .container {
     max-width: $contentMaxWidth;
     min-width: 320px;
     margin: 0 auto;
-    padding: 0 20px;
-    overflow-x: hidden;
-    overflow-y: visible;
+    padding: 0 $columnLargeSingleSpacing;
 }
 
 // Row + Columns
@@ -119,8 +129,4 @@
     .col-l-5cols {
         float: left;
     }
-}
-
-.mainCol {
-    padding-bottom: 80px;
 }
