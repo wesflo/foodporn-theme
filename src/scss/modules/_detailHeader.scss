@@ -1,5 +1,5 @@
 .detailHeader {
-    background-color: #3c3c3c;
+    background-color: $darkGreyBackground;
 
     h1 {
         position: absolute;
@@ -13,7 +13,7 @@
         z-index: 3;
         background-color: #000;
         opacity: .16;
-        @include transition(opacity 600ms ease-in-out);
+        @include transition(opacity 600ms ease-in);
     }
 
     &:hover {
