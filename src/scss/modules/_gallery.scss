@@ -1,0 +1,41 @@
+.gallery {
+    $space: 2px;
+    $singleSpace: ($space / 2);
+    @include clearfix;
+    margin: (-$singleSpace) (-$singleSpace) $contentBottomSpace (-$singleSpace);
+
+    * {
+        display: block;
+    }
+
+    > * {
+        float: left;
+    }
+
+    a {
+        position: relative;
+        width: 100%;
+        border: $singleSpace solid $bodyBackground;
+        padding: 0;
+
+        &.half {
+            width: 50%;
+        }
+    }
+
+    img {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .title {
+        @include position(absolute, null null 0 0);
+        z-index: 2;
+        background-color: rgba(0,0,0, .3);
+        color: $invertedColor;
+        padding: 4px 6px;
+        max-width: 200px;
+        float: left;
+    }
+}

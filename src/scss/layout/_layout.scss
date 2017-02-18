@@ -1,0 +1,26 @@
+html {
+    height: auto;
+}
+
+body {
+    background: $bodyBackground;
+    overflow-y: scroll;
+    padding-top: $mainNavHeight;
+}
+
+* {
+    &,
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cntWrap {
+    min-height: calc(100vh - 40px);
+}

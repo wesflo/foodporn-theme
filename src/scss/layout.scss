@@ -1,7 +1,7 @@
 @import "../../vendor/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "helper/variables";
 @import "helper/mixins";
-
 //A
 @import "layout/aside";
 //B
@@ -11,7 +11,6 @@
 //F
 @import "layout/footer";
 @import "layout/form";
-@import "layout/framework";
 //G
 @import "layout/grid";
 //H
@@ -20,6 +19,7 @@
 //J
 //K
 //L
+@import "layout/layout";
 //M
 @import "layout/mainNav";
 //N

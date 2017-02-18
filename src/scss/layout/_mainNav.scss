@@ -1,0 +1,104 @@
+.mainNav {
+    width: 100%;
+    height: $mainNavHeight;
+    background-color: $headerBackground;
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+
+    * {
+        display: block;
+    }
+
+    > ul {
+        max-width: $contentMaxWidth;
+        margin: 0 auto;
+        height: $mainNavHeight;
+
+        > li {
+            float: left;
+
+            a {
+                padding: 0 20px;
+                height: $mainNavHeight;
+                line-height: $mainNavHeight;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+/*
+            .logo {
+                $borderWidth: 20px;
+                $innerSpace: 10px;
+                position: relative;
+                padding: $innerSpace 10px;
+                margin: 0 30px 0 0;
+                height: $logoHeight;
+                width: 100px;
+                background-color: $headerBackground;
+                text-align: center;
+
+                img,
+                &:before,
+                &:after {
+                    float: left;
+                }
+
+                &:before,
+                &:after {
+                    @include position(absolute, 0 null 0 null);
+                    content: '';
+                    border: solid $headerBackground;
+                    border-width: ($logoHeight / 2) $borderWidth;
+                    border-top-color: transparent;
+                    border-bottom-color: transparent;
+                }
+
+                &:before {
+                    border-left: 0;
+                    left: -$borderWidth;
+                }
+
+                &:after {
+                    border-right: 0;
+                    right: -$borderWidth;
+                }
+
+                img {
+                    display: inline-block;
+                    height: 100%;
+                }
+            }
+            */
+
+            .logo {
+                @include square(120px);
+                padding: 10px;
+                position: relative;
+                background-color: $headerBackground;
+                text-align: center;
+                border-radius: 50%;
+
+                img {
+                    width: auto;
+                    height: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    a {
+        color: $mainNavColor;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: $brandPrimary;
+            background-color: $headerBackground;
+        }
+        &.active {
+            font-weight: bold;
+        }
+    }
+}

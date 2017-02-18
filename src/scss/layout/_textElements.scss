@@ -4,9 +4,9 @@ body {
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    //color: $brandBlack;
-    //font-size: $defaultFontSize;
+    font-family: $defaultFontFamily;
+    color: $brandDefaultColor;
+    font-size: $defaultFontSize;
 }
 
 .ellipsis {
@@ -16,10 +16,58 @@ body {
     }
 }
 
+h1, .h1 {
+    @include thinFont;
+    font-size: 50px;
+    line-height: 68px;
+    text-transform: uppercase;
+
+    span {
+        text-transform: none;
+        display: block;
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
+
+h2, .h2 {
+    @include thinFont;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h3, .h3,
+h4, .h4 {
+    @include thinFont;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
 dl, ol, ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+a {
+    color: $brandPrimary;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1px;
+
+    &,
+    &:before,
+    &:after {
+        @include transition(all 300ms);
+        @include transform(translate3d(0, 0, 0));
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $brandPrimary;
+        color: $invertedColor;
+    }
 }
 
 ul, ol {
@@ -67,4 +115,23 @@ ul, ol {
     &.upper-roman {
         list-style: upper-roman;
     }
+
+    &.labeled{
+        display: table;
+
+        li {
+            display: table-row;
+
+            > * {
+                display: table-cell;
+                padding: 4px 10px;
+
+                &:first-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
 }
+
+

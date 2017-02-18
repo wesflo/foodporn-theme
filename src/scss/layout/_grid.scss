@@ -1,0 +1,126 @@
+.clearfix {
+    @include clearfix;
+}
+
+.container {
+    max-width: $contentMaxWidth;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+// Row + Columns
+//
+// Common styles for small and large grid columns
+
+.row {
+    margin-left: -$columnSingleSpacing;
+    margin-right: -$columnSingleSpacing;
+    @include clearfix;
+
+    > * {
+        position: relative;
+        min-height: 1px;
+        padding-left: $columnSingleSpacing;
+        padding-right: $columnSingleSpacing;
+    }
+
+    &.largeSpace {
+        margin-left: -$columnLargeSingleSpacing;
+        margin-right: -$columnLargeSingleSpacing;
+        > * {
+            padding-left: $columnLargeSingleSpacing;
+            padding-right: $columnLargeSingleSpacing;
+        }
+    }
+
+    &.smallSpace {
+        $spacing: 2px;
+        margin-left: -$spacing;
+        margin-right: -$spacing;
+        > * {
+            padding-left: $spacing;
+            padding-right: $spacing;
+        }
+    }
+
+    &.rowSpace {
+        margin-top: -$columnSingleSpacing;
+        margin-bottom: -$columnSingleSpacing;
+
+        > * {
+            padding-top: $columnSingleSpacing;
+            padding-bottom: $columnSingleSpacing;
+        }
+
+        &.largeSpace {
+            margin-top: -$columnSpacing;
+            margin-bottom: -$columnSpacing;
+            > * {
+                padding-top: $columnSpacing;
+                padding-bottom: $columnSpacing;
+            }
+        }
+
+        &.smallSpace {
+            $spacing: 2px;
+            margin-top: -$spacing;
+            margin-bottom: -$spacing;
+            > * {
+                padding-top: $spacing;
+                padding-bottom: $spacing;
+            }
+        }
+    }
+}
+
+@include make-grid(xl);
+
+.col-xl-5cols {
+    width: 20%;
+    float: left;
+}
+
+.mobileView {
+    @include make-grid(xs);
+    .col-xs-5cols {
+        width: 20%;
+    }
+
+    @media (min-width: $phoneLandscapeWidth) {
+        @include make-grid(s);
+
+        .col-s-5cols {
+            width: 20%;
+        }
+    }
+
+    @media (min-width: $tabletPortraitWidth) {
+        @include make-grid(m);
+
+        .col-m-5cols {
+            width: 20%;
+        }
+    }
+
+    @media (min-width: $tabletLandscapeWidth) {
+        @include make-grid(l);
+
+        .col-l-5cols {
+            width: 20%;
+        }
+    }
+
+    .col-xs-5cols,
+    .col-s-5cols,
+    .col-m-5cols,
+    .col-l-5cols {
+        float: left;
+    }
+}
+
+.mainCol {
+    padding-bottom: 80px;
+}

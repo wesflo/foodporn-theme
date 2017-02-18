@@ -1,0 +1,166 @@
+<div class="recipePage">
+    <header class="recipeHeader parallax scroll">
+        <div class="container">
+            <h1>
+                Lorem ipsum dolor
+                <span>
+                    Lorem ipsum dolor orem ipsum dolor
+                </span>
+            </h1>
+        </div>
+        <div class="shortFacts">
+            <div class="container">
+                <ul class="fancyList">
+                    <li>
+                        <a href="javascript:">Rezept</a>
+                    </li>
+                    <li>
+                        <span>120 Minutes</span>
+                    </li>
+                    <li>
+                        <span>
+                        mittel
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head selected"></i>
+                        <i class="icon_head"></i>
+                        <i class="icon_head"></i>
+                    </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <img src="<?= $_conf['baseURL'] ?>img/_dummy/banner.png" alt="1">
+    </header>
+    <div class="container">
+        <div class="row largeSpace">
+            <article class="mainCol col-xl-16">
+                <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                    et
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                <div class="gallery">
+                    <a href="javascript:">
+                        <img src="<?= $_conf['baseURL'] ?>img/_dummy/recipe_1.png" alt="1">
+                        <span class="title">Lorem ipsum dolor sit amet</span>
+                    </a>
+                    <a href="javascript:">
+                        <img src="<?= $_conf['baseURL'] ?>img/_dummy/recipe_2.png" alt="2">
+                        <span class="title">Lorem ipsum dolor sit amet</span>
+                    </a>
+                </div>
+                <h2>Zubereitung</h2>
+                <ol class="preparations">
+                    <li>
+                        Stet clita kasd <a href="javascript:">gubergren</a>, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </li>
+                    <li>
+                        At vero eos et accusam et justo duo dolores et ea rebum.
+                    </li>
+                    <li>
+                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </li>
+                </ol>
+            </article>
+            <aside class="col-xl-8">
+                <h3>Zutaten</h3>
+                <dl class="fancyList">
+                    <dt>Lachssteak</dt>
+                    <dd>300<span>g</span></dd>
+                    <dt>Grüner Spargel</dt>
+                    <dd>1<span>Bund</span></dd>
+                    <dt>Kartoffeln</dt>
+                    <dd>250<span>g</span></dd>
+                    <dt>Cocktail Tomaten</dt>
+                    <dd>200<span>g</span></dd>
+                    <dt>Thymian</dt>
+                    <dd>3<span>Stengel</span></dd>
+                    <dt>Gewürze</dt>
+                    <dd>
+                        <span>Salz</span>
+                        <span>Pfeffer</span>
+                        <span>Zucker</span>
+                    </dd>
+                </dl>
+                <?php
+                  /*
+                   <ul class="labeled ingredients">
+                    <li>
+                        <span>300g</span>
+                        <span>Lachssteak</span>
+                    </li>
+                    <li>
+                        <span>1 Bund</span>
+                        <span>Grüner Spargel</span>
+                    </li>
+                    <li>
+                        <span>250g</span>
+                        <span>Kartoffeln</span>
+                    </li>
+                    <li>
+                        <span>200g</span>
+                        <span>Cocktail Tomaten</span>
+                    </li>
+                    <li>
+                        <span>3 Stengel</span>
+                        <span>Thymian</span>
+                    </li>
+                    <li>
+                        <span>Gewürze</span>
+                        <span>Salz & Pfeffer</span>
+                    </li>
+                </ul>
+                   */
+                ?>
+                <h3>Kategoreien</h3>
+                <ul class="fancyList">
+                    <?php for ($i = 0; $i < 4; $i++) { ?>
+                        <li>
+                            <a href="#">
+                                Category <?= $i; ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                </ul>
+                <h3>Tag</h3>
+                <ul class="fancyList">
+                    <?php for ($i = 0; $i < 10; $i++) { ?>
+                        <li>
+                            <a href="#">
+                                Tag <?= $i; ?>
+                            </a>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</div>
+<div class="parallax fixed">
+    <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2" class="parallaxFixed">
+</div>
+<div class="container">
+    <div class="related recipes">
+        <h3 class="h2">Neueste Rezepte</h3>
+        <ul class="teaserList row smallSpace rowSpace">
+            <?php for ($i = 0; $i < 8; $i++) { ?>
+                <li class="col-xl-6">
+                    <a href="javascript:" class="linkList">
+                        <h4>
+                            <?= substr('Lorem ipsum dolor sit amet, consetetur sadipscing ', 0, rand(10, 50)); ?>
+                        </h4>
+                        <span>Rezept</span>
+                        <img src="<?= $_conf['baseURL'] ?>img/_dummy/teaser_0<?= rand(0, 3); ?>.png" alt="">
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+</div>

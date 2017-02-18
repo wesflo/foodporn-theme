@@ -1,12 +1,29 @@
 //
 // Colors
 // --------------------------------------------------
-$bodyBackground: #eaeaea;
+$bodyBackground: #f0f0f0;
+$headerBackground: #fff;
 
+$brandDefaultColor: #333;
+$brandLightColor: #797979;
+$mainNavColor: #616161;
+$brandPrimary: #cc00ff;
+$brandDarkenPrimary: darken($brandPrimary, 10%);
+$invertedColor: #fff;
+
+$brandLightBorder: #b5b5b5;
+
+$mainNavHeight: 60px;
+$logoHeight: 120px;
+$headerHeight: $mainNavHeight + (($logoHeight - $mainNavHeight) / 2);
+
+$footerHeight: 40px;
 
 //
 // Fonts
 // --------------------------------------------------
+$defaultFontFamily: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$thinFontFamily: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $smallFontSize: 10px;
 $mediumFontSize: 12px;
 $defaultFontSize: 14px;
@@ -18,8 +35,45 @@ $h3FontSize: 16px;
 //
 // Global Spaces and Sizes
 // --------------------------------------------------
+$contentMaxWidth: 1400px;
 
+$contentBottomSpace: 40px;
+
+$lineSpacing: 2px;
+$smallSpacing: 5px;
+
+$columnSpacing: 16px;
+$columnSingleSpacing: ($columnSpacing / 2);
+
+$columnLargeSpacing: 80px;
+$columnLargeSingleSpacing: ($columnLargeSpacing / 2);
+
+$rowSpacing: 20px;
+$rowSingleSpacing: ($rowSpacing / 2);
+
+$panelSpacing: $rowSingleSpacing;
+$panelSingleSpacing: ($panelSpacing / 2);
+
+$largeRowSpacing: 30px;
+$largeSingleRowSpacing: ($largeRowSpacing / 2);
 
 //
 // Sizes for media queries
 // --------------------------------------------------
+$phonePortraitWidth: 320px;
+$phoneLandscapeWidth: 480px;
+$tabletPortraitWidth: 650px;
+$tabletLandscapeWidth: 820px;
+$desktopWidth: $contentMaxWidth;
+
+$phonePortraitMaxWidth: $phoneLandscapeWidth - 1;
+$phoneLandscapeMaxWidth: $tabletPortraitWidth - 1;
+$tabletPortraitMaxWidth: $tabletLandscapeWidth - 1;
+$tabletLandscapeMaxWidth: $tabletLandscapeWidth - 1;
+
+
+
+//
+// BOOTSTRAP Variables
+// --------------------------------------------------
+$grid-columns: 24;

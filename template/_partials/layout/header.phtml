@@ -1,1 +1,46 @@
-Header
+<?php
+$nav = array(
+    array(
+        'label' => 'Rezepte',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Kategorien',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Restaurants',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Weine',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Tips & Tricks',
+        'href'  => '#'
+    ),
+/*    array(
+        'label' => 'Tags',
+        'href'  => '#'
+    ),*/
+);
+?>
+<header class="pageHeader">
+    <nav class="mainNav">
+        <ul class="clearfix">
+            <li>
+                <a href="<?= $_conf['baseURL'] ?>" class="logo">
+                    <img src="<?= $_conf['baseURL'] ?>img/logo_head.png" alt="">
+                </a>
+            </li>
+            <?php foreach ($nav as $item) { ?>
+                <li>
+                    <a href="<?= $item['href']; ?>">
+                        <?= $item['label']; ?>
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
+    </nav>
+</header>

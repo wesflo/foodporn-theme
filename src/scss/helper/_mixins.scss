@@ -61,3 +61,25 @@
     -webkit-transform: translateX($t);
     transform: translateX($t);
 }
+
+@mixin fancyListColors($el, $text: $brandPrimary, $bg: $bodyBackground, $bgHover: 0) {
+    #{$el} {
+        color: $text;
+        background-color: $bg;
+    }
+
+    @if ($bgHover != 0) {
+        #{$el} {
+
+            &:hover,
+            &:focus {
+                background-color: $bgHover;
+            }
+        }
+    }
+}
+
+@mixin thinFont(){
+    font-family: $thinFontFamily;
+    font-weight: 300;
+}

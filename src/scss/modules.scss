@@ -1,7 +1,6 @@
 @import "../../vendor/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "helper/variables";
 @import "helper/mixins";
-
 //A
 //B
 //C
@@ -9,6 +8,7 @@
 //E
 //F
 //G
+@import "modules/gallery";
 //H
 //I
 //J
@@ -18,11 +18,13 @@
 //N
 //O
 //P
+@import "modules/parallax";
 //Q
 //R
 //S
 //T
 @import "modules/teaser";
+@import "modules/teaserList";
 //U
 //V
 //W
