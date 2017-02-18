@@ -33,14 +33,15 @@
         <div class="overlay"></div>
         <img src="<?= $_conf['baseURL'] ?>img/_dummy/banner.png" alt="1">
     </header>
-    <div class="container">
-        <div class="row largeSpace">
-            <article class="mainCol col-xl-16">
+    <div class="container mainCnt">
+        <div class="row rowSpace largeSpace">
+            <div class="col-xl-16">
                 <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
                     accusam et
                     justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                     et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
+                </p>
                 <div class="gallery">
                     <a href="javascript:">
                         <img src="<?= $_conf['baseURL'] ?>img/_dummy/recipe_1.png" alt="1">
@@ -68,7 +69,7 @@
                         accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </li>
                 </ol>
-            </article>
+            </div>
             <aside class="col-xl-8">
                 <h3>Zutaten</h3>
                 <dl class="fancyList">
@@ -112,10 +113,10 @@
             </aside>
         </div>
     </div>
+    <div class="spacer parallax fixed">
+        <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2" class="parallaxFixed">
+    </div>
 </section>
-<div class="parallax fixed">
-    <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2" class="parallaxFixed">
-</div>
 <div class="container">
     <div class="related recipes">
         <h3 class="h2">Neueste Rezepte</h3>

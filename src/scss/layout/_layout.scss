@@ -20,13 +20,9 @@ body {
     }
 }
 
-aside {
+.mainCnt {
     padding-top: $contentBottomSpace;
-
-    dl,
-    ul {
-        margin-bottom: $contentBottomSpace;
-    }
+    padding-bottom: $contentBottomSpace;
 }
 
 img {

@@ -10,10 +10,10 @@
         </div>
         <img src="<?= $_conf['baseURL'] ?>img/_dummy/wine_header.png" alt="1">
     </header>
-    <div class="container">
+    <div class="container mainCnt">
         <div class="row largeSpace rowSpace">
             <div class="col-xl-14">
-                <article class="contentBottomSpace">
+                <article>
                     <p class="desc">
                         Von Herzog Eberhard III im Jahre 1677 gegründet, blickt das Weingut Herzog von Württemberg auf eine lange Tradition zurück. Seit vielen Generationen befinden sich die besten
                         Weinberglagen des Landes im Eigentum des Hauses Württemberg. Leidenschaft, verbunden mit Geduld und Talent, prägen die Weine aus den angesehensten Lagen Württembergs. <br>
@@ -23,11 +23,13 @@
                     <h3>Essempfehlung</h3>
                     <p>Passt hervorragend zu leichten Speisen wie gekochtem Fleisch, gegartem Fisch und zu allen Arten von Meeresfrüchten.</p>
 
-                    <h3>Trinktemperatur</h3>
-                    <p>6 bis 8°C</p>
-
-                    <h3>Analysewerte</h3>
+                    <h3>Details</h3>
                     <dl class="fancyList">
+                        <dt>Trinktemperatur</dt>
+                        <dd>
+                            6 - 8
+                            <span>°C</span>
+                        </dd>
                         <dt>Alkohol</dt>
                         <dd>
                             13,0
@@ -44,36 +46,44 @@
                             <span>g/l</span>
                         </dd>
                     </dl>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h4>Tag</h4>
+                            <ul class="fancyList">
+                                <?php for ($i = 0; $i < 3; $i++) { ?>
+                                    <li>
+                                        <a href="#">
+                                            Tag <?= $i; ?>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <div class="col-xl-12">
+                            <h4>Kategoreien</h4>
+                            <ul class="fancyList">
+                                <?php for ($i = 0; $i < 2; $i++) { ?>
+                                    <li>
+                                        <a href="#">
+                                            Category <?= $i; ?>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    </div>
 
-                    <h4>Kategoreien</h4>
-                    <ul class="fancyList">
-                        <?php for ($i = 0; $i < 4; $i++) { ?>
-                            <li>
-                                <a href="#">
-                                    Category <?= $i; ?>
-                                </a>
-                            </li>
-                        <?php } ?>
-                    </ul>
-                    <h4>Tag</h4>
-                    <ul class="fancyList">
-                        <?php for ($i = 0; $i < 10; $i++) { ?>
-                            <li>
-                                <a href="#">
-                                    Tag <?= $i; ?>
-                                </a>
-                            </li>
-                        <?php } ?>
-                    </ul>
+
+
                 </article>
-                <article class="contentBottomSpace">
+                <article>
                     <h2>
                         Weingut
                     </h2>
                     <h3>
                         Weingut Herzog von Württemberg
                     </h3>
-                    <p>
+                    <p class="desc">
                         Seit Generationen steht das Weingut Herzog von Württemberg für besondere Weine aus diesen besten Lagen des Landes. Das mit Bedacht ausgewählte Sortiment lädt zu einer Weinreise
                         durch Württemberg auf höchstem Niveau ein. Trockene oder feinherbe filigrane Rieslinge, fruchtige Weiß- und Grauburgunder, saftige Rotweine vom Spätburgunder bis zum rassigen
                         Lemberger, ausgebaut als Gutswein oder mit viel Zeit, Geduld und Können als Große Gewächse, das Angebot bietet für jeden Weinfreund das Passende. Harmonie im Einklang von Natur

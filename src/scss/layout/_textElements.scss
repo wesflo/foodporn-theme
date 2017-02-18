@@ -4,7 +4,8 @@ body {
 }
 
 body {
-    font-family: $defaultFontFamily;
+    @include thinFont;
+    line-height: 1.5em;
     color: $brandDefaultColor;
     font-size: $defaultFontSize;
 }
@@ -58,6 +59,7 @@ dl, ol, ul {
     padding: 0;
 }
 
+article,
 dl, ol, ul,
 p {
     margin-bottom: $contentBottomSpace;
