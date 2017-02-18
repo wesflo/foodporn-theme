@@ -30,6 +30,7 @@
                 </ul>
             </div>
         </div>
+        <div class="overlay"></div>
         <img src="<?= $_conf['baseURL'] ?>img/_dummy/banner.png" alt="1">
     </header>
     <div class="container">
@@ -70,7 +71,27 @@
             </article>
             <aside class="col-xl-8">
                 <h3>Zutaten</h3>
-                <ul class="labeled ingredients">
+                <dl class="fancyList">
+                    <dt>Lachssteak</dt>
+                    <dd>300<span>g</span></dd>
+                    <dt>Grüner Spargel</dt>
+                    <dd>1<span>Bund</span></dd>
+                    <dt>Kartoffeln</dt>
+                    <dd>250<span>g</span></dd>
+                    <dt>Cocktail Tomaten</dt>
+                    <dd>200<span>g</span></dd>
+                    <dt>Thymian</dt>
+                    <dd>3<span>Stengel</span></dd>
+                    <dt>Gewürze</dt>
+                    <dd>
+                        <span>Salz</span>
+                        <span>Pfeffer</span>
+                        <span>Zucker</span>
+                    </dd>
+                </dl>
+                <?php
+                  /*
+                   <ul class="labeled ingredients">
                     <li>
                         <span>300g</span>
                         <span>Lachssteak</span>
@@ -96,6 +117,8 @@
                         <span>Salz & Pfeffer</span>
                     </li>
                 </ul>
+                   */
+                ?>
                 <h3>Kategoreien</h3>
                 <ul class="fancyList">
                     <?php for ($i = 0; $i < 4; $i++) { ?>

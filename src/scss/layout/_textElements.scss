@@ -17,9 +17,8 @@ body {
 }
 
 h1, .h1 {
-    font-family: $thinFontFamily;
-    font-weight: 300;
-    font-size: 68px;
+    @include thinFont;
+    font-size: 50px;
     line-height: 68px;
     text-transform: uppercase;
 
@@ -32,16 +31,14 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-family: $thinFontFamily;
-    font-weight: 300;
+    @include thinFont;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 h3, .h3,
 h4, .h4 {
-    font-family: $thinFontFamily;
-    font-weight: 300;
+    @include thinFont;
     font-size: 20px;
     margin-bottom: 4px;
 }

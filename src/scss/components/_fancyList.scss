@@ -4,59 +4,63 @@
     @include clearfix;
 
     li {
+        $indent: 4px;
         float: left;
         padding: 1px;
-    }
-/*
-    span,
-    a {
-        position: relative;
-        display: inline-block;
-        padding: 0 8px;
-        margin: 0 $angle;
-        height: $h;
-        line-height: $h +2;
-        text-decoration: none;
-        font-size: $smallFontSize;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        margin: 0 $indent 0 (-$indent);
 
-        &:before,
-        &:after {
-            content: '';
-            border: 0 solid;
-            @include square(0);
+        span,
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 0 8px;
+            height: $h;
+            line-height: $h +2;
+            text-decoration: none;
+            font-size: $smallFontSize;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: ($h/2);
+        }
+
+        @include fancyListColors(a, $invertedColor, $brandPrimary, $brandDarkenPrimary);
+        @include fancyListColors(span);
+    }
+
+    $lineSpace: 5px;
+    dt,
+    dd {
+        display: block;
+        padding-bottom: 4px;
+    }
+
+    dt {
+        padding-top: 8px;
+        width: 70%;
+        float: right;
+        clear: both;
+        padding-left: $lineSpace;
+    }
+
+    dd {
+        float: left;
+        width: 30%;
+        padding-top: 6px;
+        padding-right: $lineSpace;
+        border-right: 1px solid $brandLightBorder;
+        @include thinFont;
+        line-height: 24px;
+        font-size: 32px;
+        text-align: right;
+        margin-bottom: 20px;
+        color: $brandLightColor;
+
+        span {
+            font-family: $defaultFontFamily;
+            font-size: $defaultFontSize;
             display: block;
-            @include position(absolute, 0 null 0 null);
-        }
-
-        &:before {
-            border-width: $h $angle 0 0;
-            left: -$angle;
-        }
-
-        &:after {
-            border-width: 0 0 $h $angle;
-            right: -$angle;
+            line-height: 20px;
         }
     }
-*/
-    span,
-    a {
-        position: relative;
-        display: inline-block;
-        padding: 0 8px;
-        height: $h;
-        line-height: $h +2;
-        text-decoration: none;
-        font-size: $smallFontSize;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        border-radius: ($h/2);
-    }
-
-    @include fancyListColors(a, $invertedColor, $brandPrimary, $brandDarkenPrimary);
-    @include fancyListColors(span);
 }
