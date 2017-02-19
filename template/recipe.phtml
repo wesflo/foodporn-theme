@@ -117,21 +117,29 @@
         <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2" class="parallaxFixed">
     </div>
 </section>
-<div class="container">
     <div class="related recipes">
         <h3 class="h2">Neueste Rezepte</h3>
-        <ul class="teaserList row smallSpace rowSpace">
+        <div class="container">
+            <ul class="row noSpace masonryRow">
             <?php for ($i = 0; $i < 8; $i++) { ?>
-                <li class="col-xl-6">
-                    <a href="javascript:" class="linkList">
-                        <h4>
-                            <?= substr('Lorem ipsum dolor sit amet, consetetur sadipscing ', 0, rand(10, 50)); ?>
-                        </h4>
-                        <span>Rezept</span>
-                        <img src="<?= $_conf['baseURL'] ?>img/_dummy/teaser_0<?= rand(0, 3); ?>.png" alt="">
+                <li class="recipe col-xl-6 teaser">
+                    <a href="javascript:">
+                        <span class="info">
+                            <h2>
+                                Lorem ipsum dolor
+                            </h2>
+                            <h3>Lorem ipsum dolor orem ipsum dolor</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna...
+                            </p>
+                        </span>
+                        <span class="label">
+                            Rezept
+                        </span>
+                        <img src="<?= $_conf['baseURL'] ?>img/_dummy/teaser_0.png" alt="1">
                     </a>
                 </li>
             <?php } ?>
         </ul>
+        </div>
     </div>
-</div>

@@ -4,11 +4,47 @@
 
         h1 {
             padding-top: 120px;
+            text-shadow: none;
+            position: relative;
+
+            span {
+                text-transform: uppercase;
+                margin-bottom: 2px;
+            }
+
+            .s1 {
+                font-size: 85px;
+                line-height: 70px;
+            }
+
+            .s2 {
+                font-size: 26px;
+                line-height: 28px;
+                text-indent: 4px;
+                letter-spacing: 1px;
+            }
+
+            .s3 {
+                font-size: 48px;
+                line-height: 46px;
+                text-indent: 1px;
+            }
+
+            .s4 {
+                font-size: 31px;
+                line-height: 28px;
+                text-indent: 3px;
+                letter-spacing: 1px;
+            }
         }
 
-        img {
-            @include position(absolute, auto auto 0 50%);
-            @include transform(translateX(-50%));
+        .source {
+            color: $invertedColor;
+            letter-spacing: 2px;
+            text-indent: 5px;
+            display: block;
+            font-size: 10px;
+            margin-top: 10px;
         }
     }
 }
