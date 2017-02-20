@@ -17,8 +17,21 @@
 .container {
     max-width: $contentMaxWidth;
     min-width: 320px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 $columnLargeSingleSpacing;
+    padding-left: $columnLargeSingleSpacing;
+    padding-right: $columnLargeSingleSpacing;
+
+    &.full {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.smallSpace {
+        padding-left: $smallSpacing;
+        padding-right: $smallSpacing;
+    }
 }
 
 // Row + Columns
@@ -37,6 +50,15 @@
         padding-right: $columnSingleSpacing;
     }
 
+    &.noSpace {
+        margin-left: 0;
+        margin-right: 0;
+        > * {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
     &.largeSpace {
         margin-left: -$columnLargeSingleSpacing;
         margin-right: -$columnLargeSingleSpacing;
@@ -47,12 +69,11 @@
     }
 
     &.smallSpace {
-        $spacing: 2px;
-        margin-left: -$spacing;
-        margin-right: -$spacing;
+        margin-left: -$smallSpacing;
+        margin-right: -$smallSpacing;
         > * {
-            padding-left: $spacing;
-            padding-right: $spacing;
+            padding-left: $smallSpacing;
+            padding-right: $smallSpacing;
         }
     }
 

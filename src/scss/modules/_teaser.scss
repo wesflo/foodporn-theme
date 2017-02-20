@@ -1,0 +1,126 @@
+.teaser {
+    $transitionSpeed: 400ms;
+    $transitionEase: ease-out;
+
+    &.wine {
+        a {
+            padding-bottom: 200%;
+        }
+    }
+    &.restaurant {
+        a {
+            padding-bottom: 50%;
+        }
+    }
+
+    a {
+        display: block;
+        position: relative;
+        padding-bottom: 100%;
+        color: $invertedColor;
+        background-color: $darkGreyBackground;
+
+        > * {
+            position: absolute;
+            z-index: 5;
+            display: block;
+        }
+
+        &:hover {
+            .info {
+                height: 121px;
+
+                &:before,
+                &:after {
+                    left: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+
+            h3,
+            p {
+                opacity: 1;
+                margin-top: 0;
+            }
+
+            img {
+                opacity: 0.4;
+            }
+
+            .label {
+                opacity: 1;
+            }
+        }
+    }
+
+    .info {
+        @include position(absolute, null $rowSpacing $panelSpacing $rowSpacing);
+        @include transition(height $transitionSpeed $transitionEase);
+        height: 51px;
+        overflow: hidden;
+        padding: $panelSpacing;
+
+        &:before,
+        &:after {
+            content: '';
+            height: 1px;
+            background-color: $brandPrimary;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            opacity: .5;
+            @include transition(opacity $transitionSpeed $transitionEase, left $transitionSpeed $transitionEase, right $transitionSpeed $transitionEase);
+        }
+        &:before{
+            top: 0;
+        }
+        &:after {
+            bottom: 0;
+        }
+    }
+
+    h2,
+    h3 {
+        @include ellipsis();
+    }
+
+    h2 {
+        margin-bottom: $smallSpacing;
+        @include textShadow(rgba(0,0,0, .2) );
+    }
+
+    h3,
+    p {
+        margin-top: 20px;
+        opacity: 0;
+        @include transition(opacity $transitionSpeed $transitionEase, margin $transitionSpeed $transitionEase);
+    }
+
+    p {
+        height: 42px;
+        overflow: hidden;
+    }
+
+    .label {
+        $h: 24px;
+        @include position(absolute, $panelSpacing $panelSpacing null null);
+        opacity: 0;
+        height: $h;
+        padding: 0 $panelSpacing;
+        background: $invertedColor;
+        border-radius: $h;
+        line-height: $h + 2;
+        color: $brandPrimary;
+        @include transition(opacity $transitionSpeed $transitionEase);
+    }
+
+    img {
+        z-index: 1;
+        @include position(absolute, 0 0 0 0);
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        @include transition(opacity $transitionSpeed $transitionEase);
+    }
+}

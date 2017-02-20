@@ -10,6 +10,7 @@ $mainNavColor: #616161;
 $brandPrimary: #cc00ff;
 $brandDarkenPrimary: darken($brandPrimary, 10%);
 $invertedColor: #fff;
+$darkGreyBackground: #3c3c3c;
 
 $brandLightBorder: #b5b5b5;
 
@@ -40,7 +41,7 @@ $contentMaxWidth: 1400px;
 $contentBottomSpace: 40px;
 
 $lineSpacing: 2px;
-$smallSpacing: 5px;
+$smallSpacing: 2px;
 
 $columnSpacing: 16px;
 $columnSingleSpacing: ($columnSpacing / 2);

@@ -1,2 +1,2 @@
-SetEnv ENVIRONMENT_NAME localhost
-#SetEnv ENVIRONMENT_NAME production
+#SetEnv ENVIRONMENT_NAME localhost
+SetEnv ENVIRONMENT_NAME production

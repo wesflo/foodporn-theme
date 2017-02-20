@@ -1,9 +1,11 @@
 .mainNav {
+    $contentBorder: 1px solid #232323;
     width: 100%;
     height: $mainNavHeight;
     background-color: $headerBackground;
     font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
+    border-bottom: $contentBorder;
 
     * {
         display: block;
@@ -24,50 +26,6 @@
                 text-transform: uppercase;
                 letter-spacing: 1px;
             }
-/*
-            .logo {
-                $borderWidth: 20px;
-                $innerSpace: 10px;
-                position: relative;
-                padding: $innerSpace 10px;
-                margin: 0 30px 0 0;
-                height: $logoHeight;
-                width: 100px;
-                background-color: $headerBackground;
-                text-align: center;
-
-                img,
-                &:before,
-                &:after {
-                    float: left;
-                }
-
-                &:before,
-                &:after {
-                    @include position(absolute, 0 null 0 null);
-                    content: '';
-                    border: solid $headerBackground;
-                    border-width: ($logoHeight / 2) $borderWidth;
-                    border-top-color: transparent;
-                    border-bottom-color: transparent;
-                }
-
-                &:before {
-                    border-left: 0;
-                    left: -$borderWidth;
-                }
-
-                &:after {
-                    border-right: 0;
-                    right: -$borderWidth;
-                }
-
-                img {
-                    display: inline-block;
-                    height: 100%;
-                }
-            }
-            */
 
             .logo {
                 @include square(120px);
@@ -76,8 +34,18 @@
                 background-color: $headerBackground;
                 text-align: center;
                 border-radius: 50%;
+                border: $contentBorder;
+
+                &:before {
+                    content: '';
+                    @include position(absolute, -1px -1px null -1px);
+                    height: $mainNavHeight - 1;
+                    background-color: $headerBackground;
+                }
 
                 img {
+                    position: relative;
+                    z-index: 2;
                     width: auto;
                     height: 100%;
                     margin: 0 auto;
@@ -95,7 +63,7 @@
         &:active,
         &.active {
             color: $brandPrimary;
-            background-color: $headerBackground;
+            background-color: transparent;
         }
         &.active {
             font-weight: bold;
