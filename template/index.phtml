@@ -1,17 +1,18 @@
 <?php
-  $tmp = array(
-      'recipe col-xl-12',
-      'wine col-xl-6 masonrySizer',
-      'restaurant col-xl-12',
-      'tip col-xl-6',
-  );
+$tmp = array(
+  array('recipe col-xl-12', '?page=recipe'),
+  array('wine col-xl-6 masonrySizer', '?page=wine'),
+  array('restaurant col-xl-12', '/'),
+  array('tip col-xl-6', '/'),
+);
 $teasers = array();
 
-foreach($tmp as $no => $class) {
+foreach($tmp as $no => $t) {
     for($i=0;$i<10;$i++) {
         $teasers[] = array(
             'no' => $no,
-            'class' => $class,
+            'class' => $t[0],
+            'link' => $t[1],
         );
     }
 }
@@ -25,10 +26,10 @@ shuffle($teasers);
     <header class="detailHeader parallax scroll" id="wineHeader">
         <div class="container">
             <h1>
-                <span>Essen</span>
-                <span>ist ein Bedürfnis</span>
-                <span>Genießen</span>
-                <span>ist eine Kunst!</span>
+                <span class="s1">Essen</span>
+                <span class="s2">ist ein Bedürfnis</span>
+                <span class="s3">Genießen</span>
+                <span class="s4">ist eine Kunst!</span>
             </h1>
             <span class="source">
                 François de La Rochefoucauld
