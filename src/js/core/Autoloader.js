@@ -1,6 +1,8 @@
 var Autoloader = function () {
     var that = this,
-        constructors = [],
+        constructors = [
+
+        ],
         head = document.getElementsByTagName('head')[0];
 
     var loadScriptFile = function (src, onLoad) {

@@ -1,5 +1,5 @@
 .mainNav {
-    $contentBorderColor: rgba(0,0,0, 0.4);
+    $contentBorderColor: rgba(0,0,0, 0.2);
     width: 100%;
     height: $mainNavHeight;
     background-color: $headerBackground;
@@ -19,45 +19,12 @@
         > li {
             float: left;
 
-            a {
+            > a {
                 padding: 0 20px;
                 height: $mainNavHeight;
                 line-height: $mainNavHeight;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-            }
-
-            .logo {
-                @include square(120px);
-                padding: 4px 0;
-                position: relative;
-                text-align: center;
-
-                &:before,
-                &:after {
-                    content: '';
-                    @include position(absolute, 59px null null 16px);
-                    z-index: 2;
-                    width: 0;
-                    height: 0;
-                    border-style: solid;
-                    border-width: 70px 44px 0 44px;
-                    border-color: $headerBackground transparent transparent transparent;
-                }
-
-                &:after {
-                    z-index: 1;
-                    top: 60px;
-                    border-top-color: $contentBorderColor;
-                }
-
-                img {
-                    position: relative;
-                    z-index: 5;
-                    width: auto;
-                    height: 100%;
-                    margin: 0 auto;
-                }
             }
         }
     }
@@ -75,6 +42,48 @@
         }
         &.active {
             font-weight: bold;
+        }
+    }
+
+
+
+    .logo {
+        $s: 120px;
+        @include square($s);
+        padding: 5px 5px;
+        position: relative;
+        text-align: center;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+        }
+
+        &:before {
+            content: '';
+            @include position(absolute, 0 null null 0);
+            @include square($s);
+            z-index: 1;
+            background-color: $headerBackground;
+            border: 1px solid $contentBorderColor;
+            border-radius: 50%;
+        }
+
+        &:after {
+            @include position(absolute, -1px null null -1px);
+            width: ($s + 2);
+            height: $mainNavHeight;
+            z-index: 2;
+            background-color: $headerBackground;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+            position: relative;
+            z-index: 5;
+            margin: 0 auto;
         }
     }
 }

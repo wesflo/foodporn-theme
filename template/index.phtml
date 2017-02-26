@@ -1,9 +1,9 @@
 <?php
 $tmp = array(
-  array('recipe col-xl-8', '?page=recipe'),
-  array('wine col-xl-4 masonrySizer', '?page=wine'),
-  array('restaurant col-xl-8', '/'),
-  array('tip col-xl-4', '/'),
+  array('recipe col-xl-8', 'template.php?page=recipe'),
+  array('wine col-xl-4 masonrySizer', 'template.php?page=wine'),
+  array('restaurant col-xl-8', 'template.php'),
+  array('tip col-xl-4', 'template.php'),
 );
 $teasers = array();
 
@@ -40,7 +40,7 @@ shuffle($teasers);
         <ul class="row noSpace masonryRow">
             <?php foreach($teasers as $teaser) { ?>
                 <li class="<?= $teaser['class']; ?> teaser masonryItem">
-                    <a href="javascript:">
+                    <a href="<?= $teaser['link']; ?>">
                         <span class="info">
                             <h2>
                                 Lorem ipsum dolor
