@@ -1,11 +1,11 @@
 .mainNav {
-    $contentBorder: 1px solid #232323;
+    $contentBorderColor: rgba(0,0,0, 0.4);
     width: 100%;
     height: $mainNavHeight;
     background-color: $headerBackground;
     font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    border-bottom: $contentBorder;
+    border-bottom: 1px solid $contentBorderColor;
 
     * {
         display: block;
@@ -31,21 +31,29 @@
                 @include square(120px);
                 padding: 4px 0;
                 position: relative;
-                background-color: $headerBackground;
                 text-align: center;
-                border-radius: 50%;
-                border: $contentBorder;
 
-                &:before {
+                &:before,
+                &:after {
                     content: '';
-                    @include position(absolute, -1px -1px null -1px);
-                    height: $mainNavHeight - 1;
-                    background-color: $headerBackground;
+                    @include position(absolute, 59px null null 16px);
+                    z-index: 2;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 70px 44px 0 44px;
+                    border-color: $headerBackground transparent transparent transparent;
+                }
+
+                &:after {
+                    z-index: 1;
+                    top: 60px;
+                    border-top-color: $contentBorderColor;
                 }
 
                 img {
                     position: relative;
-                    z-index: 2;
+                    z-index: 5;
                     width: auto;
                     height: 100%;
                     margin: 0 auto;
