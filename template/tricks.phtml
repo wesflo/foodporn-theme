@@ -1,0 +1,44 @@
+<?php
+  $cnts = array(
+      true => array(
+          'Geschmiedete Eisenpfannen',
+          'tricks_pfanne.png',
+          'Einmal eingebrannt, zeigen diese Pfannen beste Leitfähigkeit, „laufen“ genauso gut wie beschichtete Pfannen, aber ohne deren Empfindlichkeit gegen Kratzer und höhere Temperaturen. Eisen ist ein guter Wärmeleiter, der auf die Zu- und Abnahme von Kochhitze schnell und unmittelbar reagiert. '
+      ),
+      false => array(
+            'Edelstahl Kochtöpfe',
+            'tricks_topf.png',
+            'Edelstahl ist das beliebteste Material für Kochtöpfe. Edelstahl ist leicht, lebensmittelecht, backofenfest, spülmaschinengeeignet und stabil. Hochwertige Töpfe machen sich schon nach wenigen Jahren bezahlt, da in ihnen mit weniger Strom in kürzerer Zeit und geringerer Herdleistung gekocht werden kann. Gleichzeitig ist dies gesund, da so mehr Nährstoffe und natürliches Aroma erhalten bleiben.'
+      )
+  )
+?>
+
+
+<section class="tricksPage">
+    <header class="detailHeader parallax scroll">
+        <div class="container">
+            <h1>
+                Meine Töpfe & Pfannen
+                <span>
+                    Lorem ipsum dolor sit amet
+                </span>
+            </h1>
+        </div>
+    </header>
+    <ul>
+        <?php for($i=0;$i<8;$i++) { $cnt = $cnts[($i %2 == 0)] ?>
+            <li class="row noSpace trick">
+                <img src="<?= $_conf['baseURL'] ?>img/_dummy/<?= $cnt[1]; ?>" alt="1" class="col-xl-12<?= ($i %2 == 0) ? ' right' : ''; ?>">
+                <article class="col-xl-12">
+                    <div>
+                        <h2><?= $cnt[0]; ?></h2>
+                        <p>
+                            <?= $cnt[2]; ?>
+                        </p>
+                        <a href="#bla" target="_blank" class="btn btn-primary">Amazon</a>
+                    </div>
+                </article>
+            </li>
+        <?php } ?>
+    </ul>
+</section>
