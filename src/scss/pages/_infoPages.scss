@@ -1,0 +1,16 @@
+.tricksPage {
+    .detailHeader {
+        height: 260px;
+
+        h1 {
+            padding-top: 100px;
+        }
+    }
+
+
+    article {
+        > div {
+            padding: 40px 20px 10px 40px;
+        }
+    }
+}

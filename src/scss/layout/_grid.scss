@@ -13,6 +13,9 @@
 .contentBottomSpace {
     margin-bottom: $contentBottomSpace;
 }
+.contentTopSpace {
+    margin-top: $contentBottomSpace;
+}
 
 .container {
     max-width: $contentMaxWidth;

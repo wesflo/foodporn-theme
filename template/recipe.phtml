@@ -36,9 +36,11 @@
     <div class="container mainCnt">
         <div class="row rowSpace largeSpace">
             <div class="col-xl-16">
-                <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                <p class="desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+                    et
                     accusam et
-                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                    justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam
                     et
                     justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
                 </p>
@@ -55,7 +57,8 @@
                 <h2>Zubereitung</h2>
                 <ol class="preparations">
                     <li>
-                        Stet clita kasd <a href="javascript:">gubergren</a>, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        Stet clita kasd <a href="javascript:">gubergren</a>, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                        nonumy eirmod tempor
                         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                     </li>
                     <li>
@@ -117,29 +120,25 @@
         <img src="<?= $_conf['baseURL'] ?>img/_dummy/spacer.png" alt="2" class="parallaxFixed">
     </div>
 </section>
-    <div class="related recipes">
-        <h3 class="h2">Neueste Rezepte</h3>
-        <div class="container">
-            <ul class="row noSpace masonryRow">
-            <?php for ($i = 0; $i < 8; $i++) { ?>
-                <li class="recipe col-xl-6 teaser">
-                    <a href="javascript:">
-                        <span class="info">
-                            <h2>
-                                Lorem ipsum dolor
-                            </h2>
-                            <h3>Lorem ipsum dolor orem ipsum dolor</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna...
-                            </p>
-                        </span>
-                        <span class="label">
-                            Rezept
-                        </span>
-                        <img src="<?= $_conf['baseURL'] ?>img/_dummy/teaser_0.png" alt="1">
-                    </a>
-                </li>
-            <?php } ?>
-        </ul>
-        </div>
-    </div>
+<div class="container ">
+    <h3 class="h2 contentTopSpace">Neueste Rezepte</h3>
+    <ul class="related recipes row noSpace masonryRow">
+        <?php for ($i = 0; $i < 8; $i++) { ?>
+            <li class="recipe col-xl-6 teaser">
+                <a href="javascript:">
+                    <div class="info">
+                        <h2>
+                            Lorem ipsum dolor
+                        </h2>
+                        <h3>Lorem ipsum dolor orem ipsum dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna...
+                        </p>
+                    </div>
+                    <span class="label">Rezept</span>
+                    <img src="<?= $_conf['baseURL'] ?>img/_dummy/teaser_0.png" alt="1">
+                </a>
+            </li>
+        <?php } ?>
+    </ul>
+</div>
