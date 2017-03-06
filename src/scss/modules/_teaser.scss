@@ -25,6 +25,7 @@
             z-index: 5;
             display: block;
         }
+
         &:before {
             display: none;
         }
@@ -58,7 +59,7 @@
     }
 
     .info {
-        @include position(absolute, null $rowSpacing $panelSpacing $rowSpacing);
+        @include position(absolute, null 0 0 0);
         @include transition(height $transitionSpeed $transitionEase);
         height: 51px;
         overflow: hidden;
