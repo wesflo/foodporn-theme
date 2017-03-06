@@ -1,21 +1,23 @@
 <?php
 $tmp = array(
-  array('recipe col-xl-8', 'template.php?page=recipe'),
-  array('wine col-xl-4 masonrySizer', 'template.php?page=wine'),
-  array('restaurant col-xl-8', 'template.php'),
-  array('tip col-xl-4', 'template.php?page=tricks'),
+    array('recipe col-xl-8', 'template.php?page=recipe'),
+    array('wine col-xl-4 masonrySizer', 'template.php?page=wine'),
+    array('restaurant col-xl-8', 'template.php'),
+    array('tip col-xl-4', 'template.php?page=tricks'),
 );
 $teasers = array();
 
-foreach($tmp as $no => $t) {
-    for($i=0;$i<10;$i++) {
+foreach ($tmp as $no => $t) {
+    for ($i = 0; $i < 10; $i++) {
         $teasers[] = array(
-            'no' => $no,
+            'no'    => $no,
             'class' => $t[0],
-            'link' => $t[1],
+            'link'  => $t[1],
         );
     }
 }
+$introTeaser = $teasers[0];
+
 shuffle($teasers);
 shuffle($teasers);
 shuffle($teasers);
@@ -24,21 +26,38 @@ shuffle($teasers);
 ?>
 <section class="homePage">
     <header class="detailHeader parallax scroll" id="wineHeader">
-        <div class="container">
-            <h1>
-                <span class="s1">Essen</span>
-                <span class="s2">ist ein Bedürfnis</span>
-                <span class="s3">Genießen</span>
-                <span class="s4">ist eine Kunst!</span>
-            </h1>
-            <span class="source">
-                François de La Rochefoucauld
-            </span>
+        <div class="container row noSpace">
+            <div class="col-xl-12 pull-right">
+                <h1>
+                    <span class="s1">Essen</span>
+                    <span class="s2">ist ein Bedürfnis</span>
+                    <span class="s3">Genießen</span>
+                    <span class="s4">ist eine Kunst!</span>
+                </h1>
+                <span class="source">François de La Rochefoucauld</span>
+            </div>
+            <article class="<?= $introTeaser['class']; ?> teaser col-xl-10 pull-right">
+                <a href="<?= $introTeaser['link']; ?>">
+                    <span class="info">
+                        <h2>
+                            Lorem ipsum dolor
+                        </h2>
+                        <h3>Lorem ipsum dolor orem ipsum dolor</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna...
+                        </p>
+                    </span>
+                    <span class="label">
+                        Rezept
+                    </span>
+                    <img src="<?= $_conf['baseURL'] ?>img/_dummy/teaser_<?= $introTeaser['no']; ?>.png" alt="1">
+                </a>
+            </article>
         </div>
     </header>
     <div class="container full">
         <ul class="row noSpace masonryRow">
-            <?php foreach($teasers as $teaser) { ?>
+            <?php foreach ($teasers as $teaser) { ?>
                 <li class="<?= $teaser['class']; ?> teaser masonryItem">
                     <a href="<?= $teaser['link']; ?>">
                         <span class="info">

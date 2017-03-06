@@ -1,6 +1,6 @@
 .homePage {
     .detailHeader {
-        height: 400px;
+        padding: 40px 0;
 
         h1 {
             padding-top: 120px;
@@ -45,6 +45,21 @@
             display: block;
             font-size: 10px;
             margin-top: 10px;
+        }
+        .teaser {
+            border: 1px solid rgba(0,0,0, .2);
+            a {
+                .info {
+                    height: 121px;
+                    background-color: rgba(0,0,0, .5);
+                }
+
+                h3,
+                p {
+                    opacity: 1;
+                    margin-top: 0;
+                }
+            }
         }
     }
 }
