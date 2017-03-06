@@ -1,5 +1,5 @@
 .mainNav {
-    $contentBorder: 1px solid rgba(0,0,0, 0.2);
+    $contentBorder: 1px solid rgba(0, 0, 0, 0.2);
     $logoSize: 120px;
     $linkHorizontalPadding: 20px;
     width: 100%;
@@ -45,11 +45,14 @@
             }
 
             &:hover,
-            &:focus{
+            &:focus {
                 .subNav {
                     height: 200px;
                     opacity: 1;
-                    top: $mainNavHeight;
+
+                    dl {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -114,7 +117,7 @@
         z-index: 4;
         padding: $linkHorizontalPadding 0;
         border-bottom: $contentBorder;
-        @include transition(top 400ms ease-out, opacity 400ms ease-out);
+        @include transition(height 300ms ease-out, opacity 400ms ease-out);
         overflow: hidden;
 
         .row {
@@ -125,13 +128,18 @@
             padding: 3px 6px 2px;
         }
 
+        dl {
+            opacity: 0;
+            @include transition(opacity 200ms ease-out);
+        }
+
         dt {
             text-transform: uppercase;
             margin-bottom: 6px;
         }
 
         dd {
-           font-size: $mediumFontSize;
+            font-size: $mediumFontSize;
         }
     }
 }
