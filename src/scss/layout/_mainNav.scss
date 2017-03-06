@@ -1,78 +1,97 @@
 .mainNav {
-    $contentBorderColor: rgba(0,0,0, 0.2);
+    $contentBorder: 1px solid rgba(0,0,0, 0.2);
+    $logoSize: 120px;
+    $linkHorizontalPadding: 20px;
     width: 100%;
     height: $mainNavHeight;
     background-color: $headerBackground;
     font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    border-bottom: 1px solid $contentBorderColor;
+    border-bottom: $contentBorder;
 
     * {
         display: block;
     }
 
+    .subNav .wrap,
     > ul {
         max-width: $contentMaxWidth;
         margin: 0 auto;
+    }
+
+    > ul {
         height: $mainNavHeight;
 
         > li {
             float: left;
 
             > a {
-                padding: 0 20px;
                 height: $mainNavHeight;
                 line-height: $mainNavHeight;
                 text-transform: uppercase;
                 letter-spacing: 1px;
+
+                &:before {
+                    display: none;
+                }
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: $brandPrimary;
+                    background-color: transparent;
+                }
+            }
+
+            &:hover,
+            &:focus{
+                .subNav {
+                    height: 200px;
+                    opacity: 1;
+                    top: $mainNavHeight;
+                }
             }
         }
     }
 
     a {
         color: $mainNavColor;
+        padding: 0 $linkHorizontalPadding;
         text-decoration: none;
 
-        &:hover,
-        &:focus,
-        &:active,
-        &.active {
-            color: $brandPrimary;
-            background-color: transparent;
-        }
         &.active {
             font-weight: bold;
         }
     }
 
-
-
     .logo {
-        $s: 120px;
-        @include square($s);
+        @include square($logoSize);
         padding: 5px 5px;
         position: relative;
         text-align: center;
+        z-index: 5;
 
         &:before,
         &:after {
             content: '';
             display: block;
+            opacity: 1;
         }
 
         &:before {
             content: '';
             @include position(absolute, 0 null null 0);
-            @include square($s);
+            @include square($logoSize);
             z-index: 1;
             background-color: $headerBackground;
-            border: 1px solid $contentBorderColor;
+            border: $contentBorder;
             border-radius: 50%;
         }
 
         &:after {
             @include position(absolute, -1px null null -1px);
-            width: ($s + 2);
+            width: ($logoSize + 2);
             height: $mainNavHeight;
             z-index: 2;
             background-color: $headerBackground;
@@ -84,6 +103,35 @@
             position: relative;
             z-index: 5;
             margin: 0 auto;
+        }
+    }
+
+    .subNav {
+        height: 0;
+        opacity: 0;
+        background-color: $headerBackground;
+        @include position(fixed, $mainNavHeight 0 null 0);
+        z-index: 4;
+        padding: $linkHorizontalPadding 0;
+        border-bottom: $contentBorder;
+        @include transition(top 400ms ease-out, opacity 400ms ease-out);
+        overflow: hidden;
+
+        .row {
+            padding-left: $logoSize;
+        }
+
+        a {
+            padding: 3px 6px 2px;
+        }
+
+        dt {
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        dd {
+           font-size: $mediumFontSize;
         }
     }
 }

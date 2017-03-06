@@ -92,9 +92,7 @@
 
     @if ($bgHover != 0) {
         #{$el} {
-
-            &:hover,
-            &:focus {
+            &:before {
                 background-color: $bgHover;
             }
         }

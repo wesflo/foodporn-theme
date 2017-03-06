@@ -2,27 +2,24 @@
 $nav = array(
     array(
         'label' => 'Rezepte',
-        'href'  => 'template.php?page=recipe'
-    ),
-    array(
-        'label' => 'Kategorien',
-        'href'  => 'template.php'
+        'href'  => 'template.php?page=recipe',
+        'hasSub' => true,
     ),
     array(
         'label' => 'Zutaten',
-        'href'  => 'template.php'
+        'href'  => 'template.php',
     ),
     array(
         'label' => 'Utensilien',
-        'href'  => 'template.php'
+        'href'  => 'template.php',
     ),
     array(
         'label' => 'Tips & Tricks',
-        'href'  => 'template.php?page=tricks'
+        'href'  => 'template.php?page=tricks',
     ),
     array(
         'label' => 'Weine',
-        'href'  => 'template.php?page=wine'
+        'href'  => 'template.php?page=wine',
     ),
 /*    array(
         'label' => 'Tags',
@@ -43,6 +40,33 @@ $nav = array(
                     <a href="<?= $item['href']; ?>">
                         <?= $item['label']; ?>
                     </a>
+                    <?php if(isset($item['hasSub'])) { ?>
+                        <div class="subNav">
+                            <div class="wrap">
+                                <div class="row largeSpace">
+                                    <?php for($i=0; $i<4; $i++) { ?>
+                                        <dl class="col-xl-6">
+                                            <dt>
+                                                <a href="javascript:">Lorem ipsum dolor</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="javascript:">Stet clita kasd</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">At vero eos et accusam</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">Tea takimata sanctus est</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">Dolores et ea rebum</a>
+                                            </dd>
+                                        </dl>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </li>
             <?php } ?>
         </ul>
