@@ -14,11 +14,19 @@ module.exports = function (grunt) {
             },
             library: {
                 files: {
+                    '<%= tmpPath %>/js/<%= pkg.name %>.pre.js': [
+                        // AutoLoader
+                        '<%= srcPath %>/js/core/AutoLoader.js',
+                        '<%= srcPath %>/js/core/Initialize.js'
+
+                    ],
                     '<%= tmpPath %>/js/<%= pkg.name %>.js': [
-                        //VENDORS
+                        // VENDORS
 
                         // Project
                         '<%= srcPath %>/js/**/*.js',
+                        '!<%= srcPath %>/js/core/AutoLoader.js',
+                        '!<%= srcPath %>/js/core/Initialize.js'
                     ]
                 }
             }
@@ -35,6 +43,7 @@ module.exports = function (grunt) {
             },
             prod: {
                 files: {
+                    '<%= buildPath %>/js/<%= pkg.name %>.pre.min.js': ['<%= tmpPath %>/js/<%= pkg.name %>.pre.js'],
                     '<%= buildPath %>/js/<%= pkg.name %>.min.js': ['<%= tmpPath %>/js/<%= pkg.name %>.js']
                 }
             }

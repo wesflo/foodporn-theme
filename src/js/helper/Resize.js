@@ -1,4 +1,4 @@
-var Resize = function () {
+wf.lib.Resize = function () {
     var that = this,
         isActive = false,
         listener = [],

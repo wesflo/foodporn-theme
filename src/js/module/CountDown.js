@@ -1,4 +1,4 @@
-var CountDown = function () {
+wf.lib.CountDown = function () {
     var that = this,
         clock,
         interval,
@@ -48,6 +48,7 @@ var CountDown = function () {
     var init = function () {
         initElements();
     };
+
     that.init = function () {
         init();
     }

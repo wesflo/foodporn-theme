@@ -6,7 +6,8 @@ $_conf = array(
         'dist/css/foodporn.min.css',
     ),
     'scripts' => array(
-        'dist/js/foodporn.min.js'
+        'dist/js/foodporn.pre.min.js',
+        'dist/js/foodporn.min.js',
     ),
 );
 
@@ -22,6 +23,7 @@ if($_SERVER['ENVIRONMENT_NAME'] === 'localhost'){
         'tmp/css/pages.css',
     );
     $_conf['scripts'] = array(
-        'tmp/js/foodporn.js'
+        'tmp/js/foodporn.pre.js',
+        'tmp/js/foodporn.js',
     );
 }
