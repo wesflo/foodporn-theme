@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    touch-action: manipulation;
+    -webkit-appearance: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    @include fancyListItemStyle();
+}
+
+@include fancyListColors('.btn-primary', $invertedColor, $brandPrimary, $brandDarkenPrimary);
+@include fancyListColors('.btn-secondary');

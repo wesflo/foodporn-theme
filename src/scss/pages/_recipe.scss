@@ -1,0 +1,29 @@
+.recipePage {
+    .detailHeader {
+        height: 500px;
+
+        h1 {
+            margin-top: 300px;
+        }
+    }
+
+    .ingredients {
+        li {
+            > * {
+                &:first-child {
+                    font-weight: bold;
+                    color: $brandLightColor;
+                }
+            }
+        }
+    }
+
+
+    .spacer {
+        height: 360px;
+    }
+}
+
+.related {
+    padding: $contentBottomSpace 0;
+}

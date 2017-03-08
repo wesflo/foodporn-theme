@@ -1,0 +1,43 @@
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><![endif]-->
+<meta charset="utf-8"/>
+<meta name="copyright" content="2017, wesflo"/>
+<meta name="doctype" content="page" />
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Theme - FoodPorn</title>
+<meta name="keywords" content="Theme, Foodporn, wesflo, Florian, Wessner" />
+<meta name="description" content="This is my basic template for my Foodblog: Foodporn" />
+
+<link rel="shortcut icon"<?= $_conf['baseURL']; ?>/img/sm/img/sm/favicon.ico"/>
+
+<base href="<?php echo $_conf['baseURL']; ?>"/>
+
+<?php foreach ($_conf['styles'] as $file) { ?>
+	<link href="<?= $_conf['baseURL'] . $file; ?>" rel="stylesheet">
+<?php } ?>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto:400,500" rel="stylesheet">
+<script>
+	var wf = {};
+</script>
+
+<link rel="apple-touch-icon" sizes="57x57"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"<?= $_conf['baseURL']; ?>/img/sm/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  <?= $_conf['baseURL']; ?>/img/sm/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"<?= $_conf['baseURL']; ?>/img/sm/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"<?= $_conf['baseURL']; ?>/img/sm/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"<?= $_conf['baseURL']; ?>/img/sm/favicon-16x16.png">
+<link rel="manifest"<?= $_conf['baseURL']; ?>/img/sm/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="<?= $_conf['baseURL']; ?>/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>

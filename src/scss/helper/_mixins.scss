@@ -1,0 +1,105 @@
+@mixin square($s) {
+    width: $s;
+    height: $s;
+}
+
+@mixin vertical-align() {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+@mixin iconFont() {
+    font-family: "icons";
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-transform: none;
+
+    /* Better Font Rendering =========== */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+@mixin textBorder($color, $size:1px) {
+    text-shadow: -$size -$size 0 $color, $size -$size 0 $color, -$size $size 0 $color, $size $size 0 $color;
+}
+
+@mixin textShadow($color, $size: 1px, $blur: 0) {
+    text-shadow: (-$size) (-$size) $blur $color, $size (-$size) $blur $color, -$size $size $blur $color, $size $size $blur $color;
+}
+
+@mixin bottomSpace($s) {
+    margin-bottom: $s;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@mixin border-radius($r: 0) {
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    border-radius: $r;
+}
+
+@mixin translateX($t: 0) {
+    -ms-transform: translateX($t);
+    -webkit-transform: translateX($t);
+    transform: translateX($t);
+}
+
+
+
+@mixin fancyListItemStyle($h: 28px) {
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+    height: $h;
+    line-height: $h +2;
+    text-decoration: none;
+    font-size: $smallFontSize;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: ($h/2);
+}
+
+@mixin fancyListItem($el, $h: 28px) {
+    #{$el} {
+        @include fancyListItemStyle($h);
+    }
+}
+
+@mixin fancyListColors($el, $text: $brandPrimary, $bg: $bodyBackground, $bgHover: 0) {
+    #{$el} {
+        color: $text;
+        background-color: $bg;
+    }
+
+    @if ($bgHover != 0) {
+        #{$el} {
+            &:before {
+                background-color: $bgHover;
+            }
+        }
+    }
+}
+
+@mixin thinFont(){
+    font-family: $thinFontFamily;
+    font-weight: 300;
+}

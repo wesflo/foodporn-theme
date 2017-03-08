@@ -1,0 +1,144 @@
+.mainNav {
+    $contentBorder: 1px solid rgba(0, 0, 0, 0.2);
+    $logoSize: 120px;
+    $linkHorizontalPadding: 20px;
+    width: 100%;
+    height: $mainNavHeight;
+    background-color: $headerBackground;
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    border-bottom: $contentBorder;
+
+    * {
+        display: block;
+    }
+
+    .subNav .wrap,
+    > ul {
+        max-width: $contentMaxWidth;
+        margin: 0 auto;
+    }
+
+    > ul {
+        height: $mainNavHeight;
+
+        > li {
+            float: left;
+
+            > a {
+                height: $mainNavHeight;
+                line-height: $mainNavHeight;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                &:before {
+                    display: none;
+                }
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: $brandPrimary;
+                    background-color: transparent;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                .subNav {
+                    height: 200px;
+                    opacity: 1;
+
+                    dl {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    a {
+        color: $mainNavColor;
+        padding: 0 $linkHorizontalPadding;
+        text-decoration: none;
+
+        &.active {
+            font-weight: bold;
+        }
+    }
+
+    .logo {
+        @include square($logoSize);
+        padding: 5px 5px;
+        position: relative;
+        text-align: center;
+        z-index: 5;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            opacity: 1;
+        }
+
+        &:before {
+            content: '';
+            @include position(absolute, 0 null null 0);
+            @include square($logoSize);
+            z-index: 1;
+            background-color: $headerBackground;
+            border: $contentBorder;
+            border-radius: 50%;
+        }
+
+        &:after {
+            @include position(absolute, -1px null null -1px);
+            width: ($logoSize + 2);
+            height: $mainNavHeight;
+            z-index: 2;
+            background-color: $headerBackground;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+            position: relative;
+            z-index: 5;
+            margin: 0 auto;
+        }
+    }
+
+    .subNav {
+        height: 0;
+        opacity: 0;
+        background-color: $headerBackground;
+        @include position(fixed, $mainNavHeight 0 null 0);
+        z-index: 4;
+        border-bottom: $contentBorder;
+        @include transition(height 300ms ease-out, opacity 400ms ease-out);
+        overflow: hidden;
+
+        .row {
+            padding: $linkHorizontalPadding 0 $linkHorizontalPadding $logoSize;
+        }
+
+        a {
+            padding: 3px 6px 2px;
+        }
+
+        dl {
+            opacity: 0;
+            @include transition(opacity 200ms ease-out);
+        }
+
+        dt {
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        dd {
+            font-size: $mediumFontSize;
+        }
+    }
+}

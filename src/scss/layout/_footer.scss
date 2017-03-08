@@ -1,0 +1,41 @@
+.pageFooter {
+    $footerColor: #f1f1f1;
+    position: relative;
+    z-index: 20;
+    height: $footerHeight;
+    background-color: #1d1d1d;
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: $footerColor;
+
+    > div {
+        max-width: $contentMaxWidth;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+    nav {
+        float: right;
+
+        li {
+            float: left;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 2px 10px;
+        color: $footerColor;
+        text-decoration: none;
+    }
+
+    .copy {
+        float: left;
+        padding-left: 10px;
+
+        a{
+            padding: 0;
+            color: $brandPrimary;
+        }
+    }
+}

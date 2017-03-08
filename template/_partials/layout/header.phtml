@@ -1,0 +1,103 @@
+<?php
+$nav = array(
+    array(
+        'label' => 'Rezepte',
+        'href'  => 'template.php?page=recipe',
+        'hasSub' => 1,
+    ),
+    array(
+        'label' => 'Zutaten',
+        'href'  => 'template.php',
+        'hasSub' => 2,
+    ),
+    array(
+        'label' => 'Utensilien',
+        'href'  => 'template.php',
+    ),
+    array(
+        'label' => 'Tips & Tricks',
+        'href'  => 'template.php?page=tricks',
+    ),
+    array(
+        'label' => 'Weine',
+        'href'  => 'template.php?page=wine',
+    ),
+/*    array(
+        'label' => 'Tags',
+        'href'  => '#'
+    ),*/
+);
+?>
+<header class="pageHeader" id="pageHeader">
+    <nav class="mainNav">
+        <ul class="clearfix">
+            <li>
+                <a href="<?= $_conf['baseURL'] ?>" class="logo">
+                    <img src="<?= $_conf['baseURL'] ?>img/logo_head.png" alt="">
+                </a>
+            </li>
+            <?php foreach ($nav as $item) { ?>
+                <li>
+                    <a href="<?= $item['href']; ?>">
+                        <?= $item['label']; ?>
+                    </a>
+                    <?php if(isset($item['hasSub']) && $item['hasSub'] === 1) { ?>
+                        <div class="subNav">
+                            <div class="wrap">
+                                <div class="row largeSpace">
+                                    <?php for($i=0; $i<4; $i++) { ?>
+                                        <dl class="col-xl-6">
+                                            <dt>
+                                                <a href="javascript:">Lorem ipsum dolor</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="javascript:">Stet clita kasd</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">At vero eos et accusam</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">Tea takimata sanctus est</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">Dolores et ea rebum</a>
+                                            </dd>
+                                        </dl>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } else if(isset($item['hasSub']) && $item['hasSub'] === 2) {?>
+                        <div class="subNav">
+                            <div class="wrap">
+                                <div class="row largeSpace">
+                                    <?php for($i=0; $i<4; $i++) { ?>
+                                        <dl class="col-xl-6">
+                                            <dt>
+                                                <a href="javascript:">Stet clita kasd</a>
+                                            </dt>
+                                            <dd>
+                                                <a href="javascript:">Dolores et ea rebum</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">Lorem ipsum dolor</a>
+                                            </dd>
+                                            <?php if($i %2 == 0) { ?>
+                                            <dd>
+                                                <a href="javascript:">At vero eos et accusam</a>
+                                            </dd>
+                                            <dd>
+                                                <a href="javascript:">Tea takimata sanctus est</a>
+                                            </dd>
+                                            <?php } ?>
+                                        </dl>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </li>
+            <?php } ?>
+        </ul>
+    </nav>
+</header>

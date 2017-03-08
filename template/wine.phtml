@@ -1,0 +1,100 @@
+<section class="winePage">
+    <header class="detailHeader parallax scroll" id="wineHeader">
+        <div class="container">
+            <h1>
+                <span>
+                    Weingut Herzog von Württemberg
+                </span>
+                Riesling »Schloss Monrepos«
+            </h1>
+        </div>
+        <img src="<?= $_conf['baseURL'] ?>img/_dummy/wine_header.png" alt="1">
+    </header>
+    <div class="container mainCnt">
+        <div class="row largeSpace rowSpace">
+            <div class="col-xl-14">
+                <article>
+                    <p class="desc">
+                        Von Herzog Eberhard III im Jahre 1677 gegründet, blickt das Weingut Herzog von Württemberg auf eine lange Tradition zurück. Seit vielen Generationen befinden sich die besten
+                        Weinberglagen des Landes im Eigentum des Hauses Württemberg. Leidenschaft, verbunden mit Geduld und Talent, prägen die Weine aus den angesehensten Lagen Württembergs. <br>
+                        Ein frischer Riesling-Typ, der von Natur aus eine rassige und lebhafte Säure besitzt. Im Duft dominieren vor allem die Aromen von Äpfeln und Birnen.
+                    </p>
+
+                    <h3>Essempfehlung</h3>
+                    <p>Passt hervorragend zu leichten Speisen wie gekochtem Fleisch, gegartem Fisch und zu allen Arten von Meeresfrüchten.</p>
+
+                    <h3>Details</h3>
+                    <dl class="fancyList">
+                        <dt>Trinktemperatur</dt>
+                        <dd>
+                            6 - 8
+                            <span>°C</span>
+                        </dd>
+                        <dt>Alkohol</dt>
+                        <dd>
+                            13,0
+                            <span>% vol</span>
+                        </dd>
+                        <dt>Fruchsäure</dt>
+                        <dd>
+                            6,4
+                            <span>g/l</span>
+                        </dd>
+                        <dt>Restsüße</dt>
+                        <dd>
+                            5,9
+                            <span>g/l</span>
+                        </dd>
+                    </dl>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <h4>Tag</h4>
+                            <ul class="fancyList">
+                                <?php for ($i = 0; $i < 3; $i++) { ?>
+                                    <li>
+                                        <a href="#">
+                                            Tag <?= $i; ?>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <div class="col-xl-12">
+                            <h4>Kategoreien</h4>
+                            <ul class="fancyList">
+                                <?php for ($i = 0; $i < 2; $i++) { ?>
+                                    <li>
+                                        <a href="#">
+                                            Category <?= $i; ?>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h2>
+                        Weingut
+                    </h2>
+                    <h3>
+                        Weingut Herzog von Württemberg
+                    </h3>
+                    <p class="desc">
+                        Seit Generationen steht das Weingut Herzog von Württemberg für besondere Weine aus diesen besten Lagen des Landes. Das mit Bedacht ausgewählte Sortiment lädt zu einer Weinreise
+                        durch Württemberg auf höchstem Niveau ein. Trockene oder feinherbe filigrane Rieslinge, fruchtige Weiß- und Grauburgunder, saftige Rotweine vom Spätburgunder bis zum rassigen
+                        Lemberger, ausgebaut als Gutswein oder mit viel Zeit, Geduld und Können als Große Gewächse, das Angebot bietet für jeden Weinfreund das Passende. Harmonie im Einklang von Natur
+                        und Technik sowohl im Weinberg als auch im Weinkeller und die Verbindung von alten Traditionen und neuem Wissen sind das Erfolgsrezept des Weinguts.
+                    </p>
+                    <h5>Website & Quelle</h5>
+                    <a href="http://www.weingut-wuerttemberg.de" target="_blank">www.weingut-wuerttemberg.de</a>
+                </article>
+            </div>
+            <div class="col-xl-10">
+                <aside class="clearfix">
+                    <img src="<?= $_conf['baseURL'] ?>img/_dummy/wein_01.png" alt="1" class="pushRight">
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>

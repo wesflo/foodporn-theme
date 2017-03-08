@@ -1,0 +1,34 @@
+<?php
+$nav = array(
+    array(
+        'label' => 'Tags',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Kontakt',
+        'href'  => '#'
+    ),
+    array(
+        'label' => 'Impressum',
+        'href'  => '#'
+    ),
+);
+?>
+<footer class="pageFooter clearfix">
+    <div>
+        <div class="copy">
+            Copyright &copy; 2017 Florian Wessner - <a href="http://www.wesflo.de" target="_blank">wesflo</a>
+        </div>
+        <nav>
+            <ul>
+                <?php foreach ($nav as $item) { ?>
+                    <li>
+                        <a href="<?= $item['href']; ?>">
+                            <?= $item['label']; ?>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </div>
+</footer>

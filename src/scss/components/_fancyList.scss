@@ -1,0 +1,53 @@
+.fancyList {
+    $h: 28px;
+    $angle: 10px;
+    @include clearfix;
+
+    li {
+        $indent: 4px;
+        float: left;
+        padding: 1px;
+        margin: 0 $indent 0 (-$indent);
+
+        @include fancyListItem('span, a');
+        @include fancyListColors(a, $invertedColor, $brandPrimary, $brandDarkenPrimary);
+        @include fancyListColors(span);
+    }
+
+    $lineSpace: 5px;
+    $ddWidth: 70px;
+    dt,
+    dd {
+        display: block;
+        padding-bottom: 4px;
+    }
+
+    dt {
+        padding-top: 8px;
+        width: calc(100% - #{$ddWidth});
+        float: right;
+        clear: both;
+        padding-left: $lineSpace;
+    }
+
+    dd {
+        float: left;
+        width: $ddWidth;
+        padding-top: 6px;
+        padding-right: $lineSpace;
+        border-right: 1px solid $brandLightBorder;
+        @include thinFont;
+        line-height: 24px;
+        font-size: 32px;
+        text-align: right;
+        margin-bottom: 20px;
+        color: $brandLightColor;
+
+        span {
+            font-family: $defaultFontFamily;
+            font-size: $defaultFontSize;
+            display: block;
+            line-height: 20px;
+        }
+    }
+}

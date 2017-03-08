@@ -1,0 +1,31 @@
+html {
+    height: auto;
+}
+
+body {
+    background: $bodyBackground;
+    overflow-y: scroll;
+    padding-top: $mainNavHeight;
+
+    > section {
+        min-height: calc(100vh - #{$mainNavHeight} - #{$footerHeight});
+    }
+}
+
+* {
+    &,
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
+}
+
+.mainCnt {
+    padding-top: $contentBottomSpace;
+    padding-bottom: $contentBottomSpace;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
