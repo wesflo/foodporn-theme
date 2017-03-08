@@ -115,13 +115,12 @@
         background-color: $headerBackground;
         @include position(fixed, $mainNavHeight 0 null 0);
         z-index: 4;
-        padding: $linkHorizontalPadding 0;
         border-bottom: $contentBorder;
         @include transition(height 300ms ease-out, opacity 400ms ease-out);
         overflow: hidden;
 
         .row {
-            padding-left: $logoSize;
+            padding: $linkHorizontalPadding 0 $linkHorizontalPadding $logoSize;
         }
 
         a {
