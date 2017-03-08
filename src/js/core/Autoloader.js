@@ -2,6 +2,7 @@ wf.lib.Autoloader = function () {
     var that = this,
         constructors = [
             {name: 'Helper', layoutOnly: true},
+            {name: 'Resize', layoutOnly: true},
             {name: 'Parallax', layoutOnly: true},
             {name: 'CountDown', type: 'id', trigger: 'countDown'}
         ],

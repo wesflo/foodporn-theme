@@ -27,14 +27,13 @@ wf.lib.Parallax = function () {
                 top: container.offsetTop,
                 height: container.offsetHeight
             },
-            img: container.querySelector('img')
+            img: container.querySelector('img'),
+            addScreenHeight: (container.offsetTop > visibleArea)
         };
         container.wf.rect.bottom = container.wf.rect.top + container.wf.rect.height;
         if(container.wf.img){
             container.wf.imgPercentage = getPercentage(container);
         }
-
-        console.log( container.wf.imgPercentage );
     };
 
     var scrolling = function () {
@@ -47,17 +46,21 @@ wf.lib.Parallax = function () {
                 container.wf.img.style.marginTop = getImageMargin(container, scrollTop);
             }
         }
-    };
+};
 
     var getImageMargin = function (container, scrollTop) {
-        var m = container.wf.imgPercentage * scrollTop;
-        console.log( m );
-        return (Math.round(m * -10) / 10) + 'px'
+        var W = container.wf.addScreenHeight
+                ? scrollTop + wf.resize.windowSizes.height - container.offsetTop + headerHeight
+                : scrollTop + container.offsetTop - headerHeight,
+            m = Math.round(container.wf.imgPercentage * W * -10) / 10;
+
+        return m + 'px'
     };
 
     var getPercentage = function (container) {
-        var duration = (container.offsetTop > visibleArea) ? visibleArea : (container.offsetTop + container.wf.rect.height) - headerHeight,
+        var duration = container.wf.addScreenHeight ? (visibleArea + container.wf.rect.height) : container.offsetTop - headerHeight,
             diff = container.wf.img.offsetHeight -  container.wf.rect.height;
+        duration += container.wf.rect.height;
         return diff / duration;
     };
 
