@@ -2,6 +2,7 @@ wf.lib.Autoloader = function () {
     var that = this,
         constructors = [
             {name: 'Helper', layoutOnly: true},
+            {name: 'Parallax', layoutOnly: true},
             {name: 'CountDown', type: 'id', trigger: 'countDown'}
         ],
         head = document.getElementsByTagName('head')[0];
@@ -25,7 +26,6 @@ wf.lib.Autoloader = function () {
         var key = constructor.shortKey || constructor.name.toLowerCase(),
             FU = wf.lib[constructor.name];
         element = element || document;
-        console.log(constructor, typeof FU );
         if (checkConstructorInit(element, constructor) && typeof FU === 'function' && typeof wf[key] === 'undefined') {
             wf[key] = new FU();
             if (typeof wf[key].init === 'function') {
