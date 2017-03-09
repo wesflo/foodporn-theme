@@ -3,7 +3,7 @@ wf.lib.Autoloader = function () {
         constructors = [
             {name: 'Helper', layoutOnly: true},
             {name: 'Resize', layoutOnly: true},
-            {name: 'Parallax', layoutOnly: true},
+            {name: 'Parallax', type: 'class', trigger: 'parallax'},
             {name: 'CountDown', type: 'id', trigger: 'countDown'}
         ],
         head = document.getElementsByTagName('head')[0];
@@ -15,11 +15,10 @@ wf.lib.Autoloader = function () {
         head.appendChild(script);
     };
 
-    var initConstructors = function (element) {
+    var initConstructors = function () {
         var i = 0, l = constructors.length;
-        element = element || document;
         for (; i < l; i++) {
-            initConstructor(constructors[i], element);
+            initConstructor(constructors[i], document);
         }
     };
 
@@ -47,6 +46,7 @@ wf.lib.Autoloader = function () {
     };
 
     var checkConstructorInit = function (element, constructor) {
+        console.log( arguments );
         switch (constructor.type) {
             case 'var':
                 return (window[constructor.trigger] === true);

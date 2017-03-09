@@ -27,7 +27,7 @@ wf.lib.CountDown = function () {
             minutes: clock.querySelector('.minutes'),
             second: clock.querySelector('.seconds')
         };
-        deadline = new Date(2017,2,12,20,0,0,0);
+        deadline = new Date(2017,3,12,20,0,0,0);
         updateCountDown();
         interval = setInterval(updateCountDown, 1000);
     };

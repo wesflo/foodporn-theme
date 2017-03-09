@@ -3,11 +3,11 @@ $_conf = array(
     'baseURL' => '/',
     'imageURL' => 'img/',
     'styles' => array(
-        'dist/css/foodporn.min.css',
+        'dist/css/eatjoy.min.css',
     ),
     'scripts' => array(
-        'dist/js/foodporn.pre.min.js',
-        'dist/js/foodporn.min.js',
+        'dist/js/eatjoy.pre.min.js',
+        'dist/js/eatjoy.min.js',
     ),
 );
 
@@ -23,7 +23,7 @@ if($_SERVER['ENVIRONMENT_NAME'] === 'localhost'){
         'tmp/css/pages.css',
     );
     $_conf['scripts'] = array(
-        'tmp/js/foodporn.pre.js',
-        'tmp/js/foodporn.js',
+        'tmp/js/eatjoy.pre.js',
+        'tmp/js/eatjoy.js',
     );
 }
